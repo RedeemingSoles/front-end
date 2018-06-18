@@ -7,7 +7,7 @@ const defaultState = {
 
   shoeType: '',
   shoeTypeDirty: false,
-  shoeTypeError: 'ShoeType is required',
+  shoeTypeError: 'Shoe type is required',
 
   gender: '',
   genderDirty: false,

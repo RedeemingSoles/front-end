@@ -6,19 +6,19 @@ import autoBind from '../../utils/auto-bind';
 const defaultState = {
   organizationName: '',
   usernameDirty: false,
-  usernameError: 'First Name is required',
+  usernameError: 'Organization Name is required',
 
   contactFirstName: '',
   contactFirstNameDirty: false,
-  contactFirstNameError: 'Last Name is required',
+  contactFirstNameError: 'First Name is required',
 
   contactLastName: '',
   contactLastNameDirty: false,
-  contactLastNameError: 'Phone Number is required',
+  contactLastNameError: 'Last Name is required',
 
   title: '',
   titleDirty: false,
-  titleError: 'Phone Number is required',
+  titleError: 'Title is required',
 
   phoneNumber: '',
   phoneNumberDirty: false,
@@ -26,23 +26,21 @@ const defaultState = {
 
   streetAddress: '',
   streetAddressDirty: false,
-  streetAddressError: 'Phone Number is required',
+  streetAddressError: 'Street Address is required',
 
   city: '',
   cityDirty: false,
-  cityError: 'Phone Number is required',
+  cityError: 'City is required',
 
   state: '',
   stateDirty: false,
-  stateError: 'Phone Number is required',
+  stateError: 'State is required',
 
   zipCode: '',
   zipCodeDirty: false,
-  zipCodeError: 'Phone Number is required',
+  zipCodeError: 'Zip Code is required',
 
   country: '',
-  countryDirty: false,
-  countryError: 'Phone Number is required',
 };
 
 const PHONE_NUMBER_LENGTH = 12;

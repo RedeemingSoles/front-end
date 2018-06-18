@@ -45,7 +45,7 @@ class Landing extends React.Component {
       <div>
         <h2>Login</h2>
         <p>No account?</p>
-        <Link to="/signUp">Signup</Link>
+        <Link to="/signUp">Sign up</Link>
         <AuthForm onComplete={this.handleLogin} type="Login"/>
       </div>;
 
