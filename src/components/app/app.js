@@ -8,7 +8,7 @@ import Dashboard from '../dashboard/dashboard';
 import AuthRedirect from '../auth-redirect/auth-redirect';
 import Header from '../header/header';
 import Profile from '../profile/profile';
-import * as profileActions from '../../actions/profile';
+import * as profileActions from '../../actions/profile-actions';
 
 class App extends React.Component {
   componentDidMount() {
@@ -29,7 +29,7 @@ class App extends React.Component {
             <Route exact path="/signUp" component={Landing}/>
             <Route exact path="/login" component={Landing}/>
             <Route exact path="/dashboard" component={Dashboard}/>
-            <Route exact path="/profiles" component={Profile}/>
+            <Route exact path="/profile" component={Profile}/>
           </div>
         </BrowserRouter>
       </div>
