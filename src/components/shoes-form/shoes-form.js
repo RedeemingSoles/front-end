@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import autoBind from '../../utils/auto-bind';
 
 const defaultState = {
-  name: '',
+  childName: '',
 
   shoeType: '',
   shoeTypeDirty: false,
@@ -68,11 +68,11 @@ class ShoesForm extends React.Component {
     return (
       <form className="shoes-form" onSubmit={this.handleSubmit}>
         <input
-          className="name"
+          className="childName"
           type="text"
-          name="firstName"
+          name="childName"
           placeholder="Name"
-          value={this.state.name}
+          value={this.state.childName}
           onChange={this.handleChange}
         />
 
