@@ -13,7 +13,7 @@ import * as profileActions from '../../actions/profile-actions';
 class App extends React.Component {
   componentDidMount() {
     if (this.props.loggedIn) {
-      this.props.fetchProfile() // pass in account / check route
+      this.props.fetchProfile() // pass in account / check route  look at route like me
         .catch(console.error);
     }
   }
