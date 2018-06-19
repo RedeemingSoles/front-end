@@ -34,7 +34,7 @@ class Profile extends React.Component {
     let JSXEditing = null;
     let JSXDisplay = null;
     let JSXProfile = null;
-    console.log(profile);
+
     if (profile) {
       JSXEditing =
         <div>

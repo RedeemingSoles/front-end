@@ -29,7 +29,7 @@ const defaultState = {
 class ShoesForm extends React.Component {
   constructor(props) {
     super(props);
-    this.state = props.shoes ? props.shoes : defaultState;
+    this.state = this.props.shoes ? this.props.shoes : defaultState;
     autoBind.call(this, ShoesForm);
   }
 
