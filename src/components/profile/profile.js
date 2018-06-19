@@ -28,13 +28,17 @@ class Profile extends React.Component {
     this.setState({ editing: false });
   }
 
+  componentDidMount() {
+    this.props.profileFetch()
+      .catch(console.error);
+  }
+
   render() {
     const { profile } = this.props;
 
     let JSXEditing = null;
     let JSXDisplay = null;
     let JSXProfile = null;
-    console.log('component ', profile);
     if (profile) {
       JSXEditing =
         <div>
@@ -71,6 +75,7 @@ Profile.propTypes = {
   profile: PropTypes.object,
   profileCreate: PropTypes.func,
   profileUpdate: PropTypes.func,
+  profileFetch: PropTypes.func,
   history: PropTypes.object,
 };
 
@@ -81,6 +86,7 @@ const mapStateToProps = state => ({
 const mapDispatchToProps = dispatch => ({
   profileCreate: profile => dispatch(profileActions.createRequestProfile(profile)),
   profileUpdate: profile => dispatch(profileActions.updateRequestProfile(profile)),
+  profileFetch: () => dispatch(profileActions.fetchRequestProfile()),
 });
 
 export default connect(mapStateToProps, mapDispatchToProps)(Profile);

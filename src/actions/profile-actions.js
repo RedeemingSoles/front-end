@@ -31,10 +31,10 @@ const updateRequestProfile = profile => (store) => {
 
 const fetchRequestProfile = () => (store) => {
   const { token } = store.getState();
-  return superagent.get(`${API_URL}${routes.PROFILE_ROUTE}/me`) // create new route  will check if token
-  // is associated with account
+  return superagent.get(`${API_URL}${routes.PROFILE_ROUTE}/me`)
     .set('Authorization', `Bearer ${token}`)
     .then((response) => {
+      console.log(response);
       return store.dispatch(setProfile(response.body));
     });
 };
