@@ -1,7 +1,16 @@
 ![redeeming soles logo image](assets/logo__white_200w.png)
 
+# Redeeming Soles | No Kids Left on the Sidelines
+
+[![Build Status](https://travis-ci.org/RedeemingSoles/front-end.svg?branch=staging)](https://travis-ci.org/RedeemingSoles/front-end)
 # Front-End
 Demo Front-End for the "No kids on the sidelines" initiative
+
+### Index
+- [Overview](#overview)
+- [Getting Started](#getting-started)
+- [Change Log](#change-log)
+
 
 # Overview
 

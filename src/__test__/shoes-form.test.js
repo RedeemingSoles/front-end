@@ -28,4 +28,44 @@ describe('ShoeForm testing', () => {
     const mountedShoesForm = mount(<Provider store={mockStore(testState)}><ShoesForm/></Provider>);
     expect((mountedShoesForm).find('childName')).toBeTruthy();
   });
+
+
+  test('testing ShoesForm rending shoeType', () => {
+    const middleware = [thunk, reporter, session];
+    const mockStore = configureStore(middleware);
+    const mountedShoesForm = mount(<Provider store={mockStore(testState)}><ShoesForm/></Provider>);
+    expect((mountedShoesForm).find('shoeType')).toBeTruthy();
+  });
+
+
+  test('testing ShoesForm rending gender', () => {
+    const middleware = [thunk, reporter, session];
+    const mockStore = configureStore(middleware);
+    const mountedShoesForm = mount(<Provider store={mockStore(testState)}><ShoesForm/></Provider>);
+    expect((mountedShoesForm).find('gender')).toBeTruthy();
+  });
+
+
+  test('testing ShoesForm rending age', () => {
+    const middleware = [thunk, reporter, session];
+    const mockStore = configureStore(middleware);
+    const mountedShoesForm = mount(<Provider store={mockStore(testState)}><ShoesForm/></Provider>);
+    expect((mountedShoesForm).find('age')).toBeTruthy();
+  });
+
+
+  test('testing ShoesForm rending size', () => {
+    const middleware = [thunk, reporter, session];
+    const mockStore = configureStore(middleware);
+    const mountedShoesForm = mount(<Provider store={mockStore(testState)}><ShoesForm/></Provider>);
+    expect((mountedShoesForm).find('size')).toBeTruthy();
+  });
+
+
+  test('testing ShoesForm rending message', () => {
+    const middleware = [thunk, reporter, session];
+    const mockStore = configureStore(middleware);
+    const mountedShoesForm = mount(<Provider store={mockStore(testState)}><ShoesForm/></Provider>);
+    expect((mountedShoesForm).find('message')).toBeTruthy();
+  });
 });
