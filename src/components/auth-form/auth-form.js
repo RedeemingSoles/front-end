@@ -20,6 +20,7 @@ const defaultState = {
 };
 
 const MIN_NAME_LENGTH = 6;
+const MAX_NAME_LENGTH = 28;
 const MIN_PASSWORD_LENGTH = 6;
 
 class AuthForm extends React.Component {
