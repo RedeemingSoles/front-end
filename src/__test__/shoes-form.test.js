@@ -22,10 +22,10 @@ describe('ShoeForm testing', () => {
     expect((mountedShoesForm).find('input')).toBeTruthy();
   });
 
-  test('testing ShoesForm', () => {
+  test('testing ShoesForm rending childName', () => {
     const middleware = [thunk, reporter, session];
     const mockStore = configureStore(middleware);
     const mountedShoesForm = mount(<Provider store={mockStore(testState)}><ShoesForm/></Provider>);
-    expect((mountedShoesForm).find('input')).toBeTruthy();
+    expect((mountedShoesForm).find('childName')).toBeTruthy();
   });
 });

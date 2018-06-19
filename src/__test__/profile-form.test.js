@@ -46,6 +46,4 @@ describe('Profile form testing', () => {
     </Provider>);
     expect((mountedProfileForm).find('button')).toBeTruthy();
   });
-
-
 });
