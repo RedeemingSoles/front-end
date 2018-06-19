@@ -18,17 +18,16 @@ class Landing extends React.Component {
   handleLogin(user) {
     return this.props.login(user)
       .then(() => {
-        this.props.history.push(routes.DASHBOARD_ROUTE);
+        this.props.history.push(routes.PROFILE_ROUTE);
         this.props.fetchProfile();
       })
       .catch(console.error);
   }
 
-  // TODO where we change the route for profile
   handleSignUp(user) {
     return this.props.signUp(user)
       .then(() => {
-        this.props.history.push(routes.DASHBOARD_ROUTE);
+        this.props.history.push(routes.PROFILE_ROUTE);
       })
       .catch(console.error);
   }
