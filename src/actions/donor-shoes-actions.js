@@ -29,6 +29,7 @@ const donorShoesFetchRequest = () => (store) => {
 };
 
 const donorShoesCreateRequest = shoes => (store) => {
+  console.log(shoes);
   return superagent.post(`${API_URL}/donorShoes`)
     .send(shoes)
     .then((response) => {

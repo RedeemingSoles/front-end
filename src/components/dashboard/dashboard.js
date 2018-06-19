@@ -30,4 +30,4 @@ const mapDispatchToProps = dispatch => ({
   shoesCreate: shoes => dispatch(shoesActions.shoesCreateRequest(shoes)),
 });
 
-export default connect(mapDispatchToProps)(Dashboard);
+export default connect(null, mapDispatchToProps)(Dashboard);
