@@ -36,7 +36,6 @@ class AuthForm extends React.Component {
 
     switch (name) {
       case 'username':
-        console.log(value.length);
         if (value.length < this.MIN_NAME_LENGTH) {
           return `Username must be at least ${MIN_NAME_LENGTH} characters long.`;
         }

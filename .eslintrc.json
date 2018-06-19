@@ -3,6 +3,9 @@
   "env": {
     "browser": true
   },
+  "globals": {
+    "API_URL": true
+  },
   "parser": "babel-eslint",
   "plugins": ["jest","react"],
   "rules": {
