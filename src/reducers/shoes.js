@@ -5,7 +5,7 @@ export const validateShoes = (payload) => {
 
   // TODO: Fix required properties when we refactor for the list in components
 
-  if (!payload.firstName || !payload.location) {
+  if (!payload.shoeType || !payload.gender || !payload.age || !payload.shoeSize) {
     throw new Error('Missing required properties');
   }
 };
