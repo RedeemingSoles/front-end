@@ -3,8 +3,6 @@ import PropTypes from 'prop-types';
 import validator from 'validator';
 import autoBind from './../../utils/auto-bind';
 
-// TODO: check casing of signup
-
 const defaultState = {
   username: '',
   usernameDirty: false,
@@ -29,7 +27,7 @@ class AuthForm extends React.Component {
     this.state = defaultState;
     autoBind.call(this, AuthForm);
   }
-  // TODO check for username validation
+
   handleValidation(name, value) {
     if (this.props.type === 'Login') {
       return null;
