@@ -1,12 +1,18 @@
 {
   "name": "front-end",
   "version": "1.0.0",
+  "engines": {
+    "node": "8.9.4"
+  },
   "description": "![redeeming soles logo image](assets/logo__white_200w.png)",
   "main": "webpack.common.js",
   "scripts": {
-    "test": "eslint . && jest --coverage",
-    "test-nolint": "jest --coverage",
-    "watch": "webpack-dev-server --config webpack.dev.js"
+    "watch": "webpack-dev-server --config webpack.dev.js",
+    "start": "node index.js",
+    "webpack": "webpack --config webpack.prod.js",
+    "heroku-postbuild": "webpack --progress --config webpack.prod.js",
+    "test": "eslint . && jest --verbose --coverage --forceExit --runInBand",
+    "simpletest": "jest --verbose --coverage --forceExit --runInBand"
   },
   "jest": {
     "moduleNameMapper": {
@@ -35,6 +41,7 @@
     "babel-preset-env": "^1.7.0",
     "babel-preset-react": "^6.24.1",
     "babel-preset-stage-0": "^6.24.1",
+    "clean-webpack-plugin": "^0.1.19",
     "css-loader": "^0.28.11",
     "dotenv": "^6.0.0",
     "enzyme": "^3.3.0",
@@ -44,6 +51,7 @@
     "eslint-plugin-import": "^2.12.0",
     "eslint-plugin-jest": "^21.17.0",
     "eslint-plugin-react": "^7.9.1",
+    "html-webpack-exclude-empty-assets-plugin": "^0.1.1",
     "html-webpack-plugin": "^3.2.0",
     "jest": "^23.1.0",
     "mini-css-extract-plugin": "^0.4.0",
@@ -60,9 +68,13 @@
     "sass-loader": "^7.0.3",
     "style-loader": "^0.21.0",
     "superagent": "^3.8.3",
+    "validator": "^10.3.0",
     "webpack": "^4.12.0",
     "webpack-cli": "^3.0.8",
     "webpack-dev-server": "^3.1.4",
     "webpack-merge": "^4.1.3"
+  },
+  "dependencies": {
+    "express": "^4.16.3"
   }
 }

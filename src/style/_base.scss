@@ -1,0 +1,14 @@
+@import 'vars';
+
+html,body {
+  background: $background-color;
+  text-align: center;
+}
+
+h1, h2 {
+  color: $font-color;
+}
+
+input {
+  margin-right: 10px;
+}

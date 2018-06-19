@@ -21,7 +21,7 @@ webpackConfig.output = {
 
 webpackConfig.plugins = [
   new HtmlWebpackPlugin({
-    title: 'Pound Puppy Alert',
+    title: 'Redeeming Soles',
   }),
   new DefinePlugin({
     API_URL: JSON.stringify(process.env.API_URL),
