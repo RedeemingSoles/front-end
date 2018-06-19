@@ -19,4 +19,16 @@ webpackDevConfig.plugins = [
   new HotModuleReplacementPlugin(),
 ];
 
+webpackDevConfig.module = {};
+webpackDevConfig.module.rules = [
+  {
+    test: /\.s?css$/,
+    use: [
+      'style-loader',
+      'css-loader',
+      'sass-loader',
+    ],
+  },
+];
+
 module.exports = merge(commonConfig, webpackDevConfig);

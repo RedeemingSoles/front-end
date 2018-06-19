@@ -2,11 +2,8 @@
 
 require('dotenv').config();
 
-const { DefinePlugin } = require('webpack');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const MiniCssPlugin = require('mini-css-extract-plugin');
-
-const production = process.env.NODE_ENV === 'production';
 
 const webpackConfig = module.exports = {};
 
@@ -18,25 +15,16 @@ webpackConfig.output = {
   publicPath: process.env.CDN_URL,
 };
 
-
 webpackConfig.plugins = [
   new HtmlWebpackPlugin({
-    title: 'Redeeming Soles',
+    title: 'Budget Tracker',
   }),
-  new DefinePlugin({
-    API_URL: JSON.stringify(process.env.API_URL),
+  new MiniCssPlugin({
+    filename: '[name].[hash].css',
   }),
 ];
 
-if (production) {
-  webpackConfig.plugins.push(new MiniCssPlugin({
-    filename: '[name].[hash].css',
-  }));
-}
-
 webpackConfig.module = {};
-
-const finalLoader = production ? MiniCssPlugin.loader : 'style-loader';
 webpackConfig.module.rules = [
   {
     test: /\.(png|svg|jpg|gif)$/,
@@ -55,13 +43,5 @@ webpackConfig.module.rules = [
         cacheDirectory: true,
       },
     },
-  },
-  {
-    test: /\.scss$/,
-    use: [
-      finalLoader,
-      'css-loader',
-      'sass-loader',
-    ],
   },
 ];
