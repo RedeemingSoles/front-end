@@ -73,7 +73,7 @@ class ShoesDonorForm extends React.Component {
           className="age"
           type="text"
           name="age"
-          placeholder="age"
+          placeholder="Age"
           value={this.state.age}
           onChange={this.handleChange}
         />
@@ -100,7 +100,7 @@ class ShoesDonorForm extends React.Component {
           className="donor"
           type="text"
           name="donor"
-          placeholder="donor"
+          placeholder="Donor Name (optional)"
           value={this.state.donor}
           onChange={this.handleChange}
         />

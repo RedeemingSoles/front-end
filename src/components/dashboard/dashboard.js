@@ -3,6 +3,7 @@ import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
 
 import ShoesForm from '../shoes-form/shoes-form';
+import ShoesDonorForm from '../shoes-donor-form/shoes-donor-form';
 import * as shoesActions from '../../actions/shoes-actions';
 
 class Dashboard extends React.Component {
@@ -15,6 +16,7 @@ class Dashboard extends React.Component {
       <div className="dashboard">
         <h3>Request some shoes!</h3>
         <ShoesForm onComplete={shoesCreate} buttonText={'Submit'}/>
+        <ShoesDonorForm onComplete={shoesCreate} buttonText={'Submit'}/>
       </div>
     );
   }

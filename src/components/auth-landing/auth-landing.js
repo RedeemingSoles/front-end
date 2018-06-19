@@ -24,6 +24,7 @@ class Landing extends React.Component {
       .catch(console.error);
   }
 
+  // TODO where we change the route for profile
   handleSignUp(user) {
     return this.props.signUp(user)
       .then(() => {

@@ -71,7 +71,7 @@ class ShoesForm extends React.Component {
           className="childName"
           type="text"
           name="childName"
-          placeholder="Name"
+          placeholder="Child Name (optional)"
           value={this.state.childName}
           onChange={this.handleChange}
         />
@@ -80,14 +80,14 @@ class ShoesForm extends React.Component {
           className="shoeType"
           type="text"
           name="shoeType"
-          placeholder="shoeType"
+          placeholder="Shoe Type"
           value={this.state.shoeType}
           onChange={this.handleChange}
         />
 
         <input
           className="gender"
-          type="number"
+          type="text"
           name="gender"
           placeholder="Gender"
           value={this.state.gender}
@@ -96,19 +96,19 @@ class ShoesForm extends React.Component {
 
         <input
           className="age"
-          type="number"
+          type="text"
           name="age"
-          placeholder="age"
+          placeholder="Age"
           value={this.state.age}
           onChange={this.handleChange}
         />
 
         <input
-          className="size"
-          type="text"
-          name="size"
-          placeholder="size"
-          value={this.state.size}
+          className="shoeSize"
+          type="number"
+          name="shoeSize"
+          placeholder="Shoe Size"
+          value={this.state.shoeSize}
           onChange={this.handleChange}
         />
 
@@ -116,7 +116,7 @@ class ShoesForm extends React.Component {
           className="message"
           type="text"
           name="message"
-          placeholder="message"
+          placeholder="Message (optional)"
           value={this.state.message}
           onChange={this.handleChange}
         />
