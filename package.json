@@ -1,6 +1,9 @@
 {
   "name": "front-end",
   "version": "1.0.0",
+  "engines": {
+    "node": "8.9.4"
+  },
   "description": "![redeeming soles logo image](assets/logo__white_200w.png)",
   "main": "webpack.common.js",
   "scripts": {
