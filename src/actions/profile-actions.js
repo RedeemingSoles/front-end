@@ -20,7 +20,6 @@ const createRequestProfile = profile => (store) => {
 
 const updateRequestProfile = profile => (store) => {
   const { token } = store.getState();
-  console.log(profile);
   return superagent.put(`${API_URL}${routes.PROFILE_ROUTE}/${profile._id}`)
     .set('Authorization', `Bearer ${token}`)
     .set('Content-Type', 'application/json')
@@ -32,7 +31,6 @@ const updateRequestProfile = profile => (store) => {
 
 const fetchRequestProfile = profile => (store) => {
   const { token } = store.getState();
-  console.log(profile);
   return superagent.get(`${API_URL}${routes.PROFILE_ROUTE}/${profile._id}`)
     .set('Authorization', `Bearer ${token}`)
     .then((response) => {

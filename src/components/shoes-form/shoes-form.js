@@ -33,12 +33,6 @@ class ShoesForm extends React.Component {
     autoBind.call(this, ShoesForm);
   }
 
-  // componentDidUpdate(previousProps) {
-  //   if (previousProps.shoes !== this.props.shoes) {
-  //     this.setState(this.props.shoes);
-  //   }
-  // }
-
   handleSubmit(event) {
     event.preventDefault();
     const { onComplete } = this.props;
