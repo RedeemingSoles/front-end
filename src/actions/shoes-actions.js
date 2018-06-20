@@ -54,5 +54,7 @@ const shoesDeleteRequest = shoes => (store) => {
     });
 };
 
-export { shoesDeleteRequest, shoesFetchRequest, shoesUpdateRequest, shoesCreateRequest };
-// TODO: check here for issue with export
+export { 
+  shoesDeleteRequest, shoesFetchRequest, 
+  shoesUpdateRequest, shoesCreateRequest,
+};
