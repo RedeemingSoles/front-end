@@ -76,11 +76,6 @@ class ProfileForm extends React.Component {
     e.stopPropagation();
     e.preventDefault();
     this.props.onComplete(this.state);
-    // if (this.state.phoneNumberError) {
-    //   this.setState({ phoneNumberDirty: true });
-    // } else {
-    //   this.props.onComplete(this.state);
-    // }
   }
 
   render() {
