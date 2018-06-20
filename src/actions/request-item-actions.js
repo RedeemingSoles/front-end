@@ -25,4 +25,8 @@ const remove = requestItem => ({
   payload: requestItem,
 });
 
-export { create, update, remove };
+const removeAll = () => ({
+  type: 'REQUEST_ITEM_REMOVEALL',
+});
+
+export { create, update, remove, removeAll };
