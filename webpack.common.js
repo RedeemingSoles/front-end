@@ -21,7 +21,7 @@ webpackConfig.output = {
 
 webpackConfig.plugins = [
   new HtmlWebpackPlugin({
-    title: 'LIVE - Day 36 Async Actions',
+    title: 'Redeeming Soles',
   }),
   new DefinePlugin({
     API_URL: JSON.stringify(process.env.API_URL),
