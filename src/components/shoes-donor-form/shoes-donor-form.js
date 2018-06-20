@@ -3,41 +3,34 @@ import PropTypes from 'prop-types';
 import autoBind from '../../utils/auto-bind';
 
 const defaultState = {
-  childName: '',
 
   shoeType: '',
   shoeTypeDirty: false,
   shoeTypeError: 'Shoe type is required',
 
-  gender: '',
-  genderDirty: false,
-  genderError: 'Gender is required',
-
   age: '',
   ageDirty: false,
   ageError: 'Age is required',
+
+  gender: '',
+  genderDirty: false,
+  genderError: 'Gender is required',
 
   shoeSize: '',
   shoeSizeDirty: false,
   shoeSizeError: 'Shoe size is required',
 
-  message: '',
+  donor: '',
 
   error: null,
 };
 
-class ShoesForm extends React.Component {
+class ShoesDonorForm extends React.Component {
   constructor(props) {
     super(props);
-    this.state = props.shoes ? props.shoes : defaultState;
-    autoBind.call(this, ShoesForm);
+    this.state = props.donorShoes ? props.donorShoes : defaultState;
+    autoBind.call(this, ShoesDonorForm);
   }
-
-  // componentDidUpdate(previousProps) {
-  //   if (previousProps.shoes !== this.props.shoes) {
-  //     this.setState(this.props.shoes);
-  //   }
-  // }
 
   handleSubmit(event) {
     event.preventDefault();
@@ -66,31 +59,13 @@ class ShoesForm extends React.Component {
   render() {
     const { buttonText } = this.props;
     return (
-      <form className="shoes-form" onSubmit={this.handleSubmit}>
-        <input
-          className="childName"
-          type="text"
-          name="childName"
-          placeholder="Child Name (optional)"
-          value={this.state.childName}
-          onChange={this.handleChange}
-        />
-
+      <form className="shoes-donor-form" onSubmit={this.handleSubmit}>
         <input
           className="shoeType"
           type="text"
           name="shoeType"
-          placeholder="Shoe Type"
+          placeholder="Type of Shoe"
           value={this.state.shoeType}
-          onChange={this.handleChange}
-        />
-
-        <input
-          className="gender"
-          type="text"
-          name="gender"
-          placeholder="Gender"
-          value={this.state.gender}
           onChange={this.handleChange}
         />
 
@@ -104,6 +79,15 @@ class ShoesForm extends React.Component {
         />
 
         <input
+          className="gender"
+          type="text"
+          name="gender"
+          placeholder="Gender"
+          value={this.state.gender}
+          onChange={this.handleChange}
+        />
+
+        <input
           className="shoeSize"
           type="number"
           name="shoeSize"
@@ -113,11 +97,11 @@ class ShoesForm extends React.Component {
         />
 
         <input
-          className="message"
+          className="donor"
           type="text"
-          name="message"
-          placeholder="Message (optional)"
-          value={this.state.message}
+          name="donor"
+          placeholder="Donor Name (optional)"
+          value={this.state.donor}
           onChange={this.handleChange}
         />
 
@@ -127,10 +111,10 @@ class ShoesForm extends React.Component {
   }
 }
 
-ShoesForm.propTypes = {
+ShoesDonorForm.propTypes = {
   onComplete: PropTypes.func,
-  shoes: PropTypes.object,
+  donorShoes: PropTypes.object,
   buttonText: PropTypes.string,
 };
 
-export default ShoesForm;
+export default ShoesDonorForm;
