@@ -41,6 +41,7 @@ const defaultState = {
   zipCodeError: 'Zip Code is required',
 
   country: '',
+  countryDirty: false,
 };
 
 class ProfileForm extends React.Component {
@@ -75,11 +76,6 @@ class ProfileForm extends React.Component {
     e.stopPropagation();
     e.preventDefault();
     this.props.onComplete(this.state);
-    // if (this.state.phoneNumberError) {
-    //   this.setState({ phoneNumberDirty: true });
-    // } else {
-    //   this.props.onComplete(this.state);
-    // }
   }
 
   render() {
