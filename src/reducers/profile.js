@@ -1,13 +1,20 @@
 export const validateProfile = (profile) => {
   if (!profile) throw new Error('profile is required');
-
   const {
-    username,
-    email,
-    password,
+    organizationName,
+    contactFirstName,
+    contactLastName,
+    title,
+    phoneNumber,
+    mailingAddress,
+    city,
+    state,
+    zipCode,
+    account,
   } = profile;
 
-  if (!username || !email || !password) {
+  if (!organizationName || !contactFirstName || !contactLastName || !title ||
+    !phoneNumber || !mailingAddress || !city || !state || !zipCode || !account) {
     throw new Error('invalid profile information');
   }
 };

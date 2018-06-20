@@ -24,9 +24,9 @@ const defaultState = {
   phoneNumberDirty: false,
   phoneNumberError: 'Phone Number is required',
 
-  streetAddress: '',
-  streetAddressDirty: false,
-  streetAddressError: 'Street Address is required',
+  mailingAddress: '',
+  mailingAddressDirty: false,
+  mailingAddressError: 'Street Address is required',
 
   city: '',
   cityDirty: false,
@@ -43,8 +43,6 @@ const defaultState = {
   country: '',
 };
 
-const PHONE_NUMBER_LENGTH = 12;
-
 class ProfileForm extends React.Component {
   constructor(props) {
     super(props);
@@ -55,7 +53,7 @@ class ProfileForm extends React.Component {
   handleValidation(name, value) {
     switch (name) {
       case 'phoneNumber':
-        if (value.length !== PHONE_NUMBER_LENGTH) {
+        if (!/^[\+]?[(]?[0-9]{3}[)]?[-\s\.]?[0-9]{3}[-\s\.]?[0-9]{4,6}$/.test(value)) { // eslint-disable-line
           return 'Your phone number must include: \'+\'1, \'area code\', \'seven digit number, no dashes or parenthesis';
         }
         return null;
@@ -74,13 +72,14 @@ class ProfileForm extends React.Component {
   }
 
   handleSubmit(e) {
+    e.stopPropagation();
     e.preventDefault();
-
-    if (this.state.phoneNumberError) {
-      this.setState({ phoneNumberDirty: true });
-    } else {
-      this.props.onComplete(this.state);
-    }
+    this.props.onComplete(this.state);
+    // if (this.state.phoneNumberError) {
+    //   this.setState({ phoneNumberDirty: true });
+    // } else {
+    //   this.props.onComplete(this.state);
+    // }
   }
 
   render() {
@@ -122,10 +121,10 @@ class ProfileForm extends React.Component {
           onChange={this.handleChange}
         />
         <input
-          name="streetAddress"
+          name="mailingAddress"
           placeholder="Address"
           type="text"
-          value={this.state.streetAddress}
+          value={this.state.mailingAddress}
           onChange={this.handleChange}
         />
         <input
