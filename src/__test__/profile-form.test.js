@@ -47,16 +47,4 @@ describe('Profile form testing', () => {
     </Provider>);
     expect((mountedProfileForm).find('button')).toBeTruthy();
   });
-
-  // test('testing #handleValidation', () => {
-  //   const middleware = [thunk, reporter, session];
-  //   const mockStore = configureStore(middleware);
-  //   const mountedProfileForm = mount(<Provider store={mockStore(testState)}><ProfileForm/>
-  //   </Provider>);
-  //   expect((mountedProfileForm).handleValidation('phoneNumber', 123456)).toEqual('Your phone' +
-  //       ' number must' +
-  //       ' include:' +
-  //       ' \'+\'1, \'area' +
-  //       ' code\', \'seven digit number, no dashes or parenthesis');
-  // });
 });

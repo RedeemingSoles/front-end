@@ -6,7 +6,7 @@ const { DefinePlugin } = require('webpack');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const MiniCssPlugin = require('mini-css-extract-plugin');
 
-const production = process.env.NODE_ENV === 'production'; // evals to a Boolean value
+const production = process.env.NODE_ENV === 'production';
 
 const webpackConfig = module.exports = {};
 
@@ -23,7 +23,6 @@ webpackConfig.plugins = [
   new HtmlWebpackPlugin({
     title: 'LIVE - Day 36 Async Actions',
   }),
-  // this makes webpack constants
   new DefinePlugin({
     API_URL: JSON.stringify(process.env.API_URL),
   }),
