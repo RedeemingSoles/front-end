@@ -41,6 +41,7 @@ const defaultState = {
   zipCodeError: 'Zip Code is required',
 
   country: '',
+  countryDirty: false,
 };
 
 class ProfileForm extends React.Component {
