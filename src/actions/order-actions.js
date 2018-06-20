@@ -16,4 +16,4 @@ export const submitAllItems = order => (store) => {
     .then((response) => {
       return store.dispatch(createOrder(response.body));
     });
-}; 
+};

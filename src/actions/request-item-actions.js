@@ -1,15 +1,16 @@
 import uuid from 'uuid/v4';
 
 const create = ({ 
-  shoeType, age, gender, shoeSize, donor,
+  childName, shoeType, age, gender, shoeSize, message,
 }) => ({
   type: 'REQUEST_ITEM_CREATE',
   payload: {
+    childName,
     shoeType,
     age,
     gender,
     shoeSize,
-    donor,
+    message,
     id: uuid(),
   },
 });
