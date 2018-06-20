@@ -22,6 +22,7 @@ const defaultState = {
   shoeSizeError: 'Shoe size is required',
 
   message: '',
+  messageDirty: false,
 
   error: null,
 };
@@ -29,17 +30,28 @@ const defaultState = {
 class ShoesForm extends React.Component {
   constructor(props) {
     super(props);
-    this.state = props.shoes ? props.shoes : defaultState;
+    this.state = this.props.shoes ? this.props.shoes : defaultState;
     autoBind.call(this, ShoesForm);
   }
 
-  // componentDidUpdate(previousProps) {
-  //   if (previousProps.shoes !== this.props.shoes) {
-  //     this.setState(this.props.shoes);
-  //   }
-  // }
-
   handleSubmit(event) {
+    event.preventDefault();
+    const { onComplete } = this.props;
+    const result = onComplete(this.state);
+
+    if (result instanceof Promise) {
+      result
+        .then(() => {
+          this.setState(defaultState);
+        })
+        .catch((error) => {
+          console.error('FORM ERROR', error);
+          this.setState({ error });
+        });
+    }
+  }
+
+  handleAddItem(event) {
     event.preventDefault();
     const { onComplete } = this.props;
     const result = onComplete(this.state);
@@ -120,7 +132,7 @@ class ShoesForm extends React.Component {
           value={this.state.message}
           onChange={this.handleChange}
         />
-
+        <button type="button" onClick={this.handleAddItem} >{buttonText} shoes</button>
         <button type="submit">{buttonText} shoes</button>
       </form>
     );
