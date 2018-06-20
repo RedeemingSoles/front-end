@@ -38,7 +38,6 @@ class ShoesForm extends React.Component {
     event.preventDefault();
     const { onComplete } = this.props;
     const result = onComplete(this.state);
-    console.log(onComplete);
 
     if (result instanceof Promise) {
       result

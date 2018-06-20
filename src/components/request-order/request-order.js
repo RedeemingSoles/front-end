@@ -2,6 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import { submitAllItems } from '../../actions/order-actions';
+import { removeAll } from '../../actions/request-item-actions';
 import RequestItem from '../request-item/request-item';
 import autoBind from '../../utils/auto-bind';
 
@@ -13,7 +14,15 @@ class Order extends React.Component {
   }
 
   handleSubmit() {
-    this.props.submitOrder(this.props.requestItems);
+    const order = {
+      requestItems: this.props.requestItems,
+    };
+
+    // order.requestItems = this.props.requestItems;
+    this.props.submitOrder(order)
+      .then(() => {
+        this.props.clearAll();
+      });
   }
 
   render() {
@@ -22,7 +31,7 @@ class Order extends React.Component {
     } = this.props;
 
     return (
-      <div className='requestOrder' key={requestItems.id}>
+      <div className='requestOrder' key={Order.id}>
         {
         requestItems.map(item => 
         <RequestItem requestItem={item} key={item.id} />)
@@ -36,6 +45,7 @@ class Order extends React.Component {
 Order.propTypes = {
   requestItems: PropTypes.array,
   submitOrder: PropTypes.func,
+  clearAll: PropTypes.func,
 };
 
 const mapStateToProps = state => ({
@@ -45,6 +55,7 @@ const mapStateToProps = state => ({
 const mapDispatchToProps = (dispatch) => {
   return {
     submitOrder: data => dispatch(submitAllItems(data)),
+    clearAll: () => dispatch(removeAll()),
   };
 };
 
