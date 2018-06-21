@@ -24,8 +24,8 @@ class Header extends React.Component {
 
     return (
       <header className="header">
-        <h1>Redeeming Soles</h1>
-        <nav>
+        <h1 className='logo'><Link to={routes.LANDING_ROUTE} className='logoLink'>Redeeming Soles</Link></h1>
+        <nav className='nav'>
           { this.props.loggedIn ? JSXLoggedIn : JSXNotLoggedIn }
         </nav>
         {

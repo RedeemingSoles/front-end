@@ -22,3 +22,23 @@
   margin: 0 .5em 0 .5em;
 }
 
+.logoLink{
+  color:#ffffff;
+  text-decoration:none;
+}
+
+.nav a {
+  color:#666;
+}
+.nav a:hover {
+  color:#fff;
+}
+
+.header:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+
+

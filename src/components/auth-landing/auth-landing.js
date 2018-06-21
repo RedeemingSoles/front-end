@@ -45,7 +45,6 @@ class Landing extends React.Component {
         <h2>Sign Up</h2>
         <AuthForm onComplete={this.handleSignUp} type="Signup"/>
         <p>Already have an account? &nbsp; &nbsp; &nbsp; &nbsp; <Link to="/login" className="linkLogin">Login</Link></p>
-
       </div>;
 
     const loginJSX =
@@ -59,9 +58,16 @@ class Landing extends React.Component {
     const { location } = this.props;
 
     return (
+      <div>
+      <div className='landingText'>It is our belief at Redeeming Soles that no child should ever be prevented
+        from participating in day to day activities due to a lack of proper footwear.
+        However, it happens all the time. No Kids Left on the Sidelines is a program
+        designed to help provide a firm foundation for at risk youth to stand on by
+        providing shoes and athletic gear to any child in need.</div>
       <div className="landing">
         { location.pathname === routes.SIGNUP_ROUTE ? signUpJSX : undefined }
         { location.pathname === routes.LOGIN_ROUTE ? loginJSX : undefined }
+      </div>
       </div>
     );
   }
