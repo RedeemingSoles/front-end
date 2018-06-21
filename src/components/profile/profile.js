@@ -57,7 +57,8 @@ class Profile extends React.Component {
           <p>Username - {profile.contactFirstName} {profile.contactLastName}</p>
           <p>Title - {profile.title}</p>
           <p>Organization - {profile.organizationName}</p>
-          <p>Address - {profile.mailingAddress}, {profile.city}, {profile.state} {profile.zipCode}</p>
+          <p>Address - {profile.mailingAddress}, {profile.city}, {profile.state} {profile.zipCode}
+          </p>
           <p>Phone Number - {profile.phoneNumber}</p>
           {this.state.editing ? JSXEditing : JSXDisplay}
         </div>;
