@@ -142,8 +142,8 @@ class ShoesForm extends React.Component {
             </div>
             <div className="col-75">
               <input
-                className="age"
-                type="number"
+                list="age"
+                type="text"
                 name="age"
                 placeholder="Age"
                 value={this.state.age}
@@ -206,7 +206,7 @@ class ShoesForm extends React.Component {
 
           <div className="row">
             <div className="col-25">
-              <label>Message (optional)</label>
+              <label>Message</label>
             </div>
             <div className="col-75">
               <input

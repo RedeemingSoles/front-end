@@ -51,23 +51,6 @@
   border-radius: 0px;
 }
 
-// .authInput {
-//   float: left;
-//   text-align: left;
-// }
-
-// .authLabel {
-//   float: left;
-// }
-
-// .auth-form {
-//   text-align: center;
-// }
-
-// .authBlock {
-//   border: solid;
-// }
-
 .authClearfix::after {
   content: "";
   clear: both;
@@ -77,7 +60,3 @@
 .auth-form {
   padding: 16px;
 }
-
-// .authContainer {
-//   border: solid;
-// }
