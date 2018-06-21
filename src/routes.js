@@ -1,8 +1,7 @@
 export const LOGIN_ROUTE = '/login';
-export const SIGNUP_ROUTE = '/signUp';
+export const SIGNUP_ROUTE = '/signup';
 export const DASHBOARD_ROUTE = '/dashboard';
 export const LANDING_ROUTE = '/';
 export const PROFILE_ROUTE = '/profile';
 export const ORDER_ROUTE = '/request';
-export const VALIDATION_ROUTE = '/admin-validate';
 export const ADMIN_ROUTE = '/admin';
