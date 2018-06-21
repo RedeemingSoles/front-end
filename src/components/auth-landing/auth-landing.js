@@ -7,6 +7,7 @@ import * as profileActions from '../../actions/profile-actions';
 import autoBind from '../../utils/auto-bind';
 import * as routes from '../../routes';
 import '../../style/main.scss';
+import './auth-landing.scss';
 
 import AuthForm from '../auth-form/auth-form';
 
@@ -35,19 +36,20 @@ class Landing extends React.Component {
 
   render() {
     const signUpJSX =
-      <div>
+      <div className="loginWrapper">
+        <h2 className="loginSignup">No Kids Left On The Sideline</h2>
         <h2>Sign Up</h2>
-        <p>Already have an account?</p>
-        <Link to="/login">Login</Link>
         <AuthForm onComplete={this.handleSignUp} type="Signup"/>
+        <p>Already have an account? &nbsp; &nbsp; &nbsp; &nbsp; <Link to="/login" className="linkLogin">Login</Link></p>
+
       </div>;
 
     const loginJSX =
-      <div>
+      <div className="loginWrapper">
+        <h2 className="loginSignup">No Kids Left On The Sideline</h2>
         <h2>Login</h2>
-        <p>No account?</p>
-        <Link to="/signUp">Sign up</Link>
         <AuthForm onComplete={this.handleLogin} type="Login"/>
+        <p>No account? &nbsp; &nbsp; &nbsp; &nbsp;<Link to="/signUp" className="linkLogin">Sign up</Link></p>
       </div>;
 
     const { location } = this.props;
