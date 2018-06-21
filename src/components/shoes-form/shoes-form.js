@@ -178,7 +178,7 @@ class ShoesForm extends React.Component {
             <div className="col-25">
               <label>Shoe Size</label>
             </div>
-            <div className="col-75">
+            <div className="col-75"> <option value="11"/>
               <input
                 className="shoeSize"
                 list="shoeSize"
