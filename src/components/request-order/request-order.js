@@ -5,6 +5,7 @@ import { submitAllItems } from '../../actions/order-actions';
 import { removeAll } from '../../actions/request-item-actions';
 import RequestItem from '../request-item/request-item';
 import autoBind from '../../utils/auto-bind';
+import './request-order.scss';
 
 class Order extends React.Component {
   constructor(props) {
@@ -32,11 +33,13 @@ class Order extends React.Component {
 
     return (
       <div className='requestOrder' key={Order.id}>
-        {
-        requestItems.map(item => 
-        <RequestItem requestItem={item} key={item.id} />)
-        }
+      <div id="itemList">
+            {
+              requestItems.map(item => 
+                <RequestItem requestItem={item} key={item.id} />)
+              }
         <button className='requestOrderButton' onClick={this.handleSubmit}>submit all</button>
+        </div>
       </div>
     );
   }

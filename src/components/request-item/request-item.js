@@ -15,15 +15,17 @@ class RequestItem extends React.Component {
     return (
       <div className='requestItem' key={requestItem.id}>
         <ul>
-          <li><strong> Childname:</strong> {requestItem.childName} </li>
+          <li><strong className="notItalic"> Childname:</strong> {requestItem.childName} </li>
           <li><strong> Shoe Type:</strong>  {requestItem.shoeType} </li>
           <li><strong> Age:</strong>  {requestItem.age} </li>
           <li><strong> Gender:</strong>  {requestItem.gender} </li>
           <li><strong> Shoe Size:</strong>  {requestItem.shoeSize} </li>
           <li><strong> Message:</strong>  {requestItem.message}</li>
         </ul>
+        <div className='requestButton'>
       <button className='requestItemUpdate' onClick={() => requestItemUpdate(requestItem)}>edit</button>
       <button className='requestItemRemove' onClick={() => requestItemRemove(requestItem)}>X</button>
+      </div>
     </div>
     );
   }
