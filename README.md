@@ -18,8 +18,17 @@ sports leagues for children who need sports shoes but the children's families do
 ability to obtain the shoes.  This application also keeps an inventory of sports shoes available
 to fill any requested requests in-house first.
 
-## Getting Started
 This web applications's url is [https://git.heroku.com/redeeming-soles-front.git](https://git.heroku.com/redeeming-soles-front.git)
+
+## Getting Started
+### Requirements
+[include a bulleted list of any dependencies your project requires. Include links to the dependencies, and additionally links to helpful resources to get up and running with the project's dependencies]
+
+### Installation
+```````
+[installation instructions]
+```````
+
 
 ## Using This Application
 A requesting coach or league official will sign up or login to the website.  Once logged in, the 

@@ -1,6 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import autoBind from '../../utils/auto-bind';
+import './shoes-form.scss';
 
 const defaultState = {
   childName: '',
@@ -61,62 +62,126 @@ class ShoesForm extends React.Component {
   render() {
     const { buttonText } = this.props;
     return (
-      <form className="shoes-form" onSubmit={this.handleSubmit}>
-        <input
-          className="childName"
-          type="text"
-          name="childName"
-          placeholder="Child Name (optional)"
-          value={this.state.childName}
-          onChange={this.handleChange}
-        />
+      <div className="container">
+        <form className="shoes-form" onSubmit={this.handleSubmit}>
+          <div className="row">
+            <div className="col-25">
+              <label>Child Name</label>
+            </div>
+            <div className="col-75">
+              <input
+                className="childName"
+                type="text"
+                name="childName"
+                placeholder="Child Name (optional)"
+                value={this.state.childName}
+                onChange={this.handleChange}
+              />
+            </div>
+          </div>
 
-        <input
-          className="shoeType"
-          type="text"
-          name="shoeType"
-          placeholder="Shoe Type"
-          value={this.state.shoeType}
-          onChange={this.handleChange}
-        />
+          <div className="row">
+            <div className="col-25">
+              <label>Shoe Type</label>
+            </div>
+            <div className="col-75">
+              <input
+                list="sports"
+                className="shoeType"
+                type="text"
+                name="shoeType"
+                placeholder="Shoe Type"
+                value={this.state.shoeType}
+                onChange={this.handleChange}
+              />
+            </div>
+          </div>
+          
+          <datalist id="sports">
+            <option value="Baseball"/>
+            <option value="Basketball"/>
+            <option value="Football"/>
+            <option value="Soccer"/>
+            <option value="Track"/>
+            <option value="Other"/>
+          </datalist>
 
-        <input
-          className="gender"
-          type="text"
-          name="gender"
-          placeholder="Gender"
-          value={this.state.gender}
-          onChange={this.handleChange}
-        />
+          <div className="row">
+            <div className="col-25">
+              <label>Gender</label>
+            </div>
+            <div className="col-75">
+              <input
+                list="gender"
+                className="gender"
+                type="text"
+                name="gender"
+                placeholder="Gender"
+                value={this.state.gender}
+                onChange={this.handleChange}
+              />
+            </div>
+          </div>
 
-        <input
-          className="age"
-          type="text"
-          name="age"
-          placeholder="Age"
-          value={this.state.age}
-          onChange={this.handleChange}
-        />
+          <datalist id="gender">
+            <option value="Female"/>
+            <option value="Male"/>
+            <option value="Other"/>
+          </datalist>
 
-        <input
-          className="shoeSize"
-          type="number"
-          name="shoeSize"
-          placeholder="Shoe Size"
-          value={this.state.shoeSize}
-          onChange={this.handleChange}
-        />
+          <div className="row">
+            <div className="col-25">
+              <label>Age</label>
+            </div>
+            <div className="col-75">
+              <input
+                className="age"
+                type="number"
+                name="age"
+                placeholder="Age"
+                value={this.state.age}
+                onChange={this.handleChange}
+              />
+            </div>
+          </div>
 
-        <input
-          className="message"
-          type="text"
-          name="message"
-          placeholder="Message (optional)"
-          value={this.state.message}
-          onChange={this.handleChange}
-        />
-        <button type="submit" onClick={this.handleSubmit} >{buttonText} shoes</button>
-      </form>
+          <div className="row">
+            <div className="col-25">
+              <label>Shoe Size</label>
+            </div>
+            <div className="col-75">
+              <input
+                className="shoeSize"
+                type="number"
+                name="shoeSize"
+                placeholder="Shoe Size"
+                value={this.state.shoeSize}
+                onChange={this.handleChange}
+              />
+            </div>
+          </div>
+
+          <div className="row">
+            <div className="col-25">
+              <label>Message (optional)</label>
+            </div>
+            <div className="col-75">
+              <input
+              className="message"
+              type="text"
+              name="message"
+              placeholder="Message (optional)"
+              value={this.state.message}
+              onChange={this.handleChange}
+              />
+            </div>
+          </div>
+
+          <div className="row">
+            <button className="formButton" type="submit" onClick={this.handleSubmit} >{buttonText} shoes</button>
+          </div>
+        </form>
+      </div>
     );
   }
 }
