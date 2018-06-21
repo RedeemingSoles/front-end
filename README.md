@@ -2,7 +2,11 @@
 
 # Redeeming Soles | No Kids Left on the Sidelines
 
+![Twitter](https://img.shields.io/twitter/url/http/shields.io.svg?style=social)
+![license](https://img.shields.io/github/license/mashape/apistatus.svg)
 [![Build Status](https://travis-ci.org/RedeemingSoles/front-end.svg?branch=staging)](https://travis-ci.org/RedeemingSoles/front-end)
+![GitHub top language](https://img.shields.io/github/languages/top/badges/shields.svg)
+
 
 ### Index
 - [Overview](#overview)
