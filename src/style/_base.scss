@@ -3,6 +3,22 @@
 html,body {
   background: $background-color;
   text-align: center;
+  font-family: sans-serif;
+  width:100%;
+
+  // background: url('/../assets/RedeemingSoles.jpg');
+  // background: url('..#{$assets}RedeemingSoles.jpg');
+  // background-size:cover;
+}
+
+.app {
+  background-color:#db6c27;
+  position:absolute;
+  left:5%;
+  right:5%;
+  top:0;
+  // margin: -20px auto;
+
 }
 
 h1, h2 {
@@ -11,4 +27,9 @@ h1, h2 {
 
 input {
   margin-right: 10px;
+}
+
+.landing{
+  background-color:#db6c27;
+  height:100vh;
 }
