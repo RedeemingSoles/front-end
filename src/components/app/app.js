@@ -8,6 +8,7 @@ import Dashboard from '../dashboard/dashboard';
 import AuthRedirect from '../auth-redirect/auth-redirect';
 import Header from '../header/header';
 import Profile from '../profile/profile';
+import Admin from '../admin/admin';
 import * as profileActions from '../../actions/profile-actions';
 
 class App extends React.Component {
@@ -30,6 +31,7 @@ class App extends React.Component {
             <Route exact path="/login" component={Landing}/>
             <Route exact path="/dashboard" component={Dashboard}/>
             <Route exact path="/profile" component={Profile}/>
+            <Route exact path="/admin" component={Admin}/>
           </div>
         </BrowserRouter>
       </div>
