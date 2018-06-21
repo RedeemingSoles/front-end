@@ -6,6 +6,7 @@ import * as authActions from '../../actions/auth-actions';
 import * as profileActions from '../../actions/profile-actions';
 import autoBind from '../../utils/auto-bind';
 import * as routes from '../../routes';
+import '../../style/main.scss';
 
 import AuthForm from '../auth-form/auth-form';
 
