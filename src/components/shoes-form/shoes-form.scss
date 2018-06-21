@@ -1,6 +1,14 @@
+.container {
+  background-color: #f2f2f2;
+  padding: 20px;
+  width: 44%;
+  margin: 0 auto;
+  float:right;
+}
+
 input[type=text], input[type=number], select, textarea{
-  width: 100%;
-  padding: 12px;
+  width: 80%;
+  padding: 8px;
   border: 1px solid #ccc;
   border-radius: 4px;
   box-sizing: border-box;
@@ -8,8 +16,9 @@ input[type=text], input[type=number], select, textarea{
 }
 
 label {
-  padding: 12px 12px 12px 0;
+  padding: 12px 0 12px 0;
   display: inline-block;
+  font-size: .8em;
 }
 
 .formButton {
@@ -20,16 +29,7 @@ label {
   border-radius: 4px;
   cursor: pointer;
   margin-top: 10px;
-  width: 18em;
-}
-
-.container {
-  border-radius: 5px;
-  background-color: #f2f2f2;
-  padding: 20px;
-  width: 45%;
-  margin: 0 auto;
-  float:right;
+  width: 50%;
 }
 
 .col-25 {
@@ -52,6 +52,6 @@ label {
 
 @media screen and (max-width: 600px) {
   .col-25, .col-75, .formButton, input[type=number], input[type=text], .container {
-    width: 75%;
+    width: 74.8%;
   }
 }

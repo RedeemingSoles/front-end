@@ -1,9 +1,30 @@
 #itemList {
   overflow: scroll;
-  background: hsl(0, 0%, 95%);
-  height: 22.7em;
-  padding: 1.5em;
+  border: 1em #f2f2f2 solid;
+  background: #f2f2f2;
+  height: 18.4em;
+  padding: 1em;
   width: 40%;
   float: right;
-  border-radius: 5px;
+}
+
+#requestHeader {
+  margin: 0 auto;
+  display: block;
+  padding: 0px;
+}
+
+.requestOrderButton {
+  margin: 0 auto;
+  width: 25%;
+  font-size: .8em;
+  display: block;
+
+}
+
+@media only screen and (max-width: 600px) {
+  #itemList {
+      height: 100%;
+      width: 68%;
+  }
 }

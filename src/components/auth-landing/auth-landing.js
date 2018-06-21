@@ -53,7 +53,7 @@ class Landing extends React.Component {
         <h2 className="loginSignup">No Kids Left On The Sideline</h2>
         <h2>Login</h2>
         <AuthForm onComplete={this.handleLogin} type="Login"/>
-        <p>No account? &nbsp; &nbsp; &nbsp; &nbsp;<Link to="/signUp" className="linkLogin">Sign up</Link></p>
+        <p>No account? &nbsp; &nbsp; &nbsp; &nbsp;<Link to="/signup" className="linkLogin">Sign up</Link></p>
       </div>;
 
     const { location } = this.props;
