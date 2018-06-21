@@ -54,8 +54,11 @@ class Profile extends React.Component {
 
       JSXProfile =
         <div>
-          <p>Username - {profile.username}</p>
-          <p>Email - {profile.email}</p>
+          <p>Username - {profile.contactFirstName} {profile.contactLastName}</p>
+          <p>Title - {profile.title}</p>
+          <p>Organization - {profile.organizationName}</p>
+          <p>Address - {profile.mailingAddress}, {profile.city}, {profile.state} {profile.zipCode}
+          </p>
           <p>Phone Number - {profile.phoneNumber}</p>
           {this.state.editing ? JSXEditing : JSXDisplay}
         </div>;

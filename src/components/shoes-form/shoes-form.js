@@ -168,6 +168,7 @@ class ShoesForm extends React.Component {
                 className="shoeSize"
                 list="shoeSize"
                 type="number"
+                step="0.1"
                 name="shoeSize"
                 placeholder="Shoe Size"
                 value={this.state.shoeSize}
