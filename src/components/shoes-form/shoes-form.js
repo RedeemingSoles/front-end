@@ -153,24 +153,8 @@ class ShoesForm extends React.Component {
           </div>
 
           <datalist id="age">
-            <option value="19"/>
-            <option value="18"/>
-            <option value="17"/>
-            <option value="16"/>
-            <option value="15"/>
-            <option value="14"/>
-            <option value="13"/>
-            <option value="12"/>
-            <option value="11"/>
-            <option value="10"/>
-            <option value="9"/>
-            <option value="8"/>
-            <option value="7"/>
-            <option value="6"/>
-            <option value="5"/>
-            <option value="4"/>
-            <option value="3"/>
-            <option value="N/A"/>
+            <option value="Youth"/>
+            <option value="Adult"/>
           </datalist>
 
           <div className="row">

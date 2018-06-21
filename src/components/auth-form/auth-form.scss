@@ -1,9 +1,83 @@
-.auth-form input[type=text], input[type=password], input[type=email] {
-  width: 50%;
-  text-align: center;
-  height: 5%;
-  padding: 5px;
-  margin: .3em 0;
-  border-radius: 5px;
-  border: none;
+.auth-form {
+  width: 25%;
+  margin: 0 auto;
 }
+
+.auth-form input[type=text], .auth-form input[type=password], .auth-form input[type=email] {
+  width: 96%;
+  text-align: left;
+  padding: 3px;
+  margin: 5px 0 5px 0;
+  display: inline-block;
+  border: none;
+  background: #f1f1f1;
+  font-size: .810em;
+}
+
+.auth-form label {
+  padding: 0px 12px 0px 0;
+  font-size: .810em;
+  color: lightgray;
+  float: left;
+}
+
+.auth-form input[type=text]:focus, input[type=password]:focus, input[type=email]:focus {
+  background-color: #ddd;
+  outline: none;
+}
+
+#authButton {
+  background-color: white;
+  color: black;
+  border: 2px solid #555555;
+  text-align: center;
+  font-size: .8em;
+  padding: .5em 1.5em;
+  margin: 15px auto;
+  cursor: pointer;
+  opacity: 0.9;
+  width: 50%;
+  transition-duration: 0.4s;
+
+  :hover {
+    background-color: #555555;
+    color: white;
+  }
+}
+
+
+#login {
+  width: 100%;
+  border-radius: 0px;
+}
+
+// .authInput {
+//   float: left;
+//   text-align: left;
+// }
+
+// .authLabel {
+//   float: left;
+// }
+
+// .auth-form {
+//   text-align: center;
+// }
+
+// .authBlock {
+//   border: solid;
+// }
+
+.authClearfix::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+.auth-form {
+  padding: 16px;
+}
+
+// .authContainer {
+//   border: solid;
+// }
