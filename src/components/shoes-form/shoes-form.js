@@ -39,6 +39,7 @@ class ShoesForm extends React.Component {
     event.preventDefault();
     const { onComplete } = this.props;
     const result = onComplete(this.state);
+    this.setState(defaultState);
 
     if (result instanceof Promise) {
       result
@@ -143,7 +144,8 @@ class ShoesForm extends React.Component {
             <div className="col-75">
               <input
                 className="age"
-                type="number"
+                list="age"
+                type="text"
                 name="age"
                 placeholder="Age"
                 value={this.state.age}
