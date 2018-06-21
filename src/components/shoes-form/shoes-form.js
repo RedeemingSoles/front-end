@@ -174,9 +174,6 @@ class ShoesForm extends React.Component {
             <option value="N/A"/>
           </datalist>
 
-
-
-
           <div className="row">
             <div className="col-25">
               <label>Shoe Size</label>
@@ -223,11 +220,6 @@ class ShoesForm extends React.Component {
             <option value="1.5"/>
             <option value="1"/>
           </datalist>
-
-
-
-
-
 
           <div className="row">
             <div className="col-25">
