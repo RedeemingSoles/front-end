@@ -1,6 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import autoBind from '../../utils/auto-bind';
+import './shoes-form.scss';
 
 const defaultState = {
   childName: '',
@@ -115,7 +116,9 @@ class ShoesForm extends React.Component {
           value={this.state.message}
           onChange={this.handleChange}
         />
+        <div>
         <button type="submit" onClick={this.handleSubmit} >{buttonText} shoes</button>
+        </div>
       </form>
     );
   }

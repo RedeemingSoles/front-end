@@ -5,6 +5,7 @@ import { connect } from 'react-redux';
 
 import * as authActions from '../../actions/auth-actions';
 import * as routes from '../../routes';
+import './header.scss';
 
 class Header extends React.Component {
   render() {
