@@ -8,6 +8,8 @@ import ShoesForm from '../shoes-form/shoes-form';
 import * as requestItemActions from '../../actions/request-item-actions';
 import Order from '../request-order/request-order';
 
+import './dashboard.scss';
+
 class Dashboard extends React.Component {
   constructor(props) {
     super(props);

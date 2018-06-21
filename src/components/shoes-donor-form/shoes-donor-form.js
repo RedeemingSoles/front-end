@@ -105,7 +105,7 @@ class ShoesDonorForm extends React.Component {
           onChange={this.handleChange}
         />
 
-        <button type="submit">{buttonText} shoes</button>
+        <input type="submit">{buttonText} shoes</input>
       </form>
     );
   }
