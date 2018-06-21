@@ -100,9 +100,16 @@ class ShoesForm extends React.Component {
           <datalist id="sports">
             <option value="Baseball"/>
             <option value="Basketball"/>
+            <option value="Bowling"/>
+            <option value="Cross Country"/>
             <option value="Football"/>
+            <option value="Golf"/>
             <option value="Soccer"/>
+            <option value="Softball"/>
+            <option value="Tennis"/>
             <option value="Track"/>
+            <option value="Volleyball"/>
+            <option value="Wrestling"/>
             <option value="Other"/>
           </datalist>
 
@@ -126,7 +133,7 @@ class ShoesForm extends React.Component {
           <datalist id="gender">
             <option value="Female"/>
             <option value="Male"/>
-            <option value="Other"/>
+            <option value="N/A"/>
           </datalist>
 
           <div className="row">
@@ -145,6 +152,27 @@ class ShoesForm extends React.Component {
             </div>
           </div>
 
+          <datalist id="age">
+            <option value="19"/>
+            <option value="18"/>
+            <option value="17"/>
+            <option value="16"/>
+            <option value="15"/>
+            <option value="14"/>
+            <option value="13"/>
+            <option value="12"/>
+            <option value="11"/>
+            <option value="10"/>
+            <option value="9"/>
+            <option value="8"/>
+            <option value="7"/>
+            <option value="6"/>
+            <option value="5"/>
+            <option value="4"/>
+            <option value="3"/>
+            <option value="N/A"/>
+          </datalist>
+
           <div className="row">
             <div className="col-25">
               <label>Shoe Size</label>
@@ -152,6 +180,7 @@ class ShoesForm extends React.Component {
             <div className="col-75">
               <input
                 className="shoeSize"
+                list="shoeSize"
                 type="number"
                 name="shoeSize"
                 placeholder="Shoe Size"
@@ -160,6 +189,36 @@ class ShoesForm extends React.Component {
               />
             </div>
           </div>
+
+          <datalist id="shoeSize">
+            <option value="16"/>
+            <option value="15"/>
+            <option value="14"/>
+            <option value="13"/>
+            <option value="12"/>
+            <option value="11.5"/>
+            <option value="11"/>
+            <option value="10.5"/>
+            <option value="10"/>
+            <option value="9.5"/>
+            <option value="9"/>
+            <option value="8.5"/>
+            <option value="8"/>
+            <option value="7.5"/>
+            <option value="7"/>
+            <option value="6.5"/>
+            <option value="6"/>
+            <option value="5.5"/>
+            <option value="5"/>
+            <option value="4.5"/>
+            <option value="4"/>
+            <option value="3.3"/>
+            <option value="3"/>
+            <option value="2.5"/>
+            <option value="2"/>
+            <option value="1.5"/>
+            <option value="1"/>
+          </datalist>
 
           <div className="row">
             <div className="col-25">
