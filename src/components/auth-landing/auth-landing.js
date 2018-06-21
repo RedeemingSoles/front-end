@@ -71,7 +71,7 @@ Landing.propTypes = {
   signUp: PropTypes.func,
   login: PropTypes.func,
   fetchProfile: PropTypes.func,
-  token: PropTypes.object,
+  token: PropTypes.string,
   location: PropTypes.object,
   history: PropTypes.object,
 };
