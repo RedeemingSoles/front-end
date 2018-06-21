@@ -43,13 +43,17 @@ class Profile extends React.Component {
     if (profile) {
       JSXEditing =
         <div>
+          <br/>
           <ProfileForm profile={profile} onComplete={this.handleUpdate}/>
-          <button onClick={() => this.setState({ editing: false })}>Cancel</button>
+          <button className="authButton" onClick={() => this.setState({ editing: false })}>Cancel</button>
+          <br/>
         </div>;
 
       JSXDisplay =
         <div>
-          <button onClick={() => this.setState({ editing: true })}>Edit</button>
+          <br/>
+          <button className="authButton" onClick={() => this.setState({ editing: true })}>Edit</button>
+          <br/>
         </div>;
 
       JSXProfile =

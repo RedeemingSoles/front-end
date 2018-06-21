@@ -168,7 +168,7 @@ class ShoesDonorForm extends React.Component {
         />
         <br/>
         <br/>
-        <button type="submit">{buttonText} shoes</button>
+        <button type="submit" className="authButton">{buttonText} shoes</button>
         <br/>
       </form>
     );
