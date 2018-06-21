@@ -146,7 +146,7 @@ class ShoesForm extends React.Component {
                 list="age"
                 type="text"
                 name="age"
-                placeholder="Age"
+                placeholder="Age Type"
                 value={this.state.age}
                 onChange={this.handleChange}
               />
