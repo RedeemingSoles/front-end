@@ -151,8 +151,10 @@ class ProfileForm extends React.Component {
           value={this.state.country}
           onChange={this.handleChange}
         />
-
-        <button type="submit">{this.props.profile ? 'update' : 'create'} profile</button>
+        <br/>
+        <br/>
+        <button className="authButton" type="submit">{this.props.profile ? 'update' : 'create'} profile</button>
+        <br/>
       </form>
     );
   }
