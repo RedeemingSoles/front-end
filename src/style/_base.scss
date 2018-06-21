@@ -2,9 +2,11 @@
 
 
 body {
-  background: $background-img;
+  background: $background-img no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
   background-size: cover;
-  background-repeat: no-repeat;
   text-align: center;
   font-family: sans-serif;
   width:100%;
@@ -16,6 +18,7 @@ body {
 
 .app {
   background-color:#db6c27;
+  background: rgba(219,108,39,0.92);
   position:absolute;
   left:10%;
   right:10%;
@@ -28,11 +31,19 @@ h1, h2 {
   color: $font-color;
 }
 
+.loginSignup {
+  color:#4a4a4a;
+  font-weight:normal;
+}
+
 input {
   margin-right: 10px;
 }
 
 .landing{
-  background-color:#db6c27;
   height:100vh;
+}
+
+.linkLogin {
+  color:#666;
 }
