@@ -4,7 +4,6 @@ import PropTypes from 'prop-types';
 
 import autoBind from '../../utils/auto-bind';
 import ShoesForm from '../shoes-form/shoes-form';
-// import ShoesDonorForm from '../shoes-donor-form/shoes-donor-form';
 import * as requestItemActions from '../../actions/request-item-actions';
 import Order from '../request-order/request-order';
 
@@ -28,8 +27,6 @@ class Dashboard extends React.Component {
         <p> All Shoe Requests: </p>
         <Order />
         <ShoesForm onComplete={requestItemCreate} buttonText={'Add'}/>
-        <h3>Input Donated Shoes</h3>
-        {/* <ShoesDonorForm onComplete={requestItemCreate} buttonText={'Submit'}/> */}
       </div>
     );
   }
