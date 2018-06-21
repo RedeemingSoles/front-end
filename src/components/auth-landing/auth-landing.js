@@ -18,7 +18,13 @@ class Landing extends React.Component {
   handleLogin(user) {
     return this.props.login(user)
       .then(() => {
-        this.props.history.push(routes.DASHBOARD_ROUTE);
+        // HERE
+        console.log('TOKEN', JSON.parse(this.props.token));
+        if (JSON.parse(this.props.token).isAdmin) {
+          this.props.history.push(routes.ADMIN_ROUTE);
+        } else {
+          this.props.history.push(routes.DASHBOARD_ROUTE);
+        }
         this.props.fetchProfile();
       })
       .catch(console.error);
