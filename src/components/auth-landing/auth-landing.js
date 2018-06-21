@@ -18,8 +18,6 @@ class Landing extends React.Component {
   handleLogin(user) {
     return this.props.login(user)
       .then(() => {
-        // HERE
-        console.log('TOKEN', JSON.parse(this.props.token));
         if (JSON.parse(this.props.token).isAdmin) {
           this.props.history.push(routes.ADMIN_ROUTE);
         } else {
@@ -70,6 +68,7 @@ Landing.propTypes = {
   signUp: PropTypes.func,
   login: PropTypes.func,
   fetchProfile: PropTypes.func,
+  token: PropTypes.object,
   location: PropTypes.object,
   history: PropTypes.object,
 };
