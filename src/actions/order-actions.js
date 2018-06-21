@@ -7,8 +7,7 @@ export const createOrder = order => ({
 });
 
 export const submitAllItems = order => (store) => {
-  const { token } = store.getState();
-  console.log('__ORDER__', order);
+  const { token } = JSON.parse(store.getState().token);
 
   return superagent.post(`${API_URL}${routes.ORDER_ROUTE}`)
     .set('Authorization', `Bearer ${token}`)

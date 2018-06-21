@@ -19,7 +19,6 @@ class Order extends React.Component {
       requestItems: this.props.requestItems,
     };
 
-    // order.requestItems = this.props.requestItems;
     this.props.submitOrder(order)
       .then(() => {
         this.props.clearAll();
