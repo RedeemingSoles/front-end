@@ -143,7 +143,8 @@ class ShoesForm extends React.Component {
             <div className="col-75">
               <input
                 className="age"
-                type="number"
+                list="age"
+                type="string"
                 name="age"
                 placeholder="Age"
                 value={this.state.age}
@@ -166,6 +167,7 @@ class ShoesForm extends React.Component {
                 className="shoeSize"
                 list="shoeSize"
                 type="number"
+                step="0.1"
                 name="shoeSize"
                 placeholder="Shoe Size"
                 value={this.state.shoeSize}
