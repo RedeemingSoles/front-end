@@ -1,4 +1,5 @@
 import superagent from 'superagent';
+import * as routes from '../routes';
 
 const donorShoesFetch = shoes => ({
   type: 'SHOES_DONOR_FETCH',
@@ -10,18 +11,8 @@ const donorShoesCreate = shoes => ({
   payload: shoes,
 });
 
-const donorShoesUpdate = shoes => ({
-  type: 'SHOES_DONOR_UPDATE',
-  payload: shoes,
-});
-
-const donorShoesDelete = shoes => ({
-  type: 'SHOES_DONOR_DELETE',
-  payload: shoes,
-});
-
 const donorShoesFetchRequest = () => (store) => {
-  return superagent.get(`${API_URL}/donorShoes`)
+  return superagent.get(`${API_URL}${routes.INPUT_ROUTE}`)
     .then((response) => {
       store.dispatch(donorShoesFetch(response.body));
       return response;
@@ -29,7 +20,7 @@ const donorShoesFetchRequest = () => (store) => {
 };
 
 const donorShoesCreateRequest = shoes => (store) => {
-  return superagent.post(`${API_URL}/donorShoes`)
+  return superagent.post(`${API_URL}${routes.INPUT_ROUTE}`)
     .send(shoes)
     .then((response) => {
       store.dispatch(donorShoesCreate(response.body));
@@ -37,24 +28,4 @@ const donorShoesCreateRequest = shoes => (store) => {
     });
 };
 
-const donorShoesUpdateRequest = shoes => (store) => {
-  return superagent.put(`${API_URL}/donorShoes/${shoes._id}`)
-    .send(shoes)
-    .then((response) => {
-      store.dispatch(donorShoesUpdate(response.body));
-      return response;
-    });
-};
-
-const donorShoesDeleteRequest = shoes => (store) => {
-  return superagent.delete(`${API_URL}/donorShoes/${shoes._id}`)
-    .then((response) => {
-      store.dispatch(donorShoesDelete(shoes));
-      return response;
-    });
-};
-
-export { 
-  donorShoesDeleteRequest, donorShoesFetchRequest, 
-  donorShoesUpdateRequest, donorShoesCreateRequest,
-};
+export { donorShoesFetchRequest, donorShoesCreateRequest };
