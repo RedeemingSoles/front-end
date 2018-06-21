@@ -1,8 +1,6 @@
-.body textarea {
-  height: 50px;
-}
-
-.body {
-  text-align: left;
-  margin-top: 50px;
+.shoesFormContainer::after {
+  content: "";
+  clear: both;
+  display: table;
+  border: solid;
 }

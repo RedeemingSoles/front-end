@@ -1,7 +1,12 @@
 @import 'vars';
 
-html,body {
-  background: $background-color;
+
+body {
+  background: $background-img no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
   text-align: center;
   font-family: sans-serif;
   width:100%;
@@ -13,9 +18,10 @@ html,body {
 
 .app {
   background-color:#db6c27;
+  background: rgba(219,108,39,0.92);
   position:absolute;
-  left:5%;
-  right:5%;
+  left:10%;
+  right:10%;
   top:0;
   // margin: -20px auto;
 
@@ -25,11 +31,19 @@ h1, h2 {
   color: $font-color;
 }
 
+.loginSignup {
+  color:#4a4a4a;
+  font-weight:normal;
+}
+
 input {
   margin-right: 10px;
 }
 
 .landing{
-  background-color:#db6c27;
   height:100vh;
+}
+
+.linkLogin {
+  color:#666;
 }

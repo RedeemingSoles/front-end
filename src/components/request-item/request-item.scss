@@ -1,0 +1,22 @@
+.requestItem {
+  float: left;
+  text-align: left;
+  padding: .3em;
+
+  ul {
+    padding: 0;
+    font-size: .8em;
+    margin: 0;
+
+    li {
+      display: inline-block;
+      padding: .3em;
+      font-size: .8em;
+    }
+  }
+}
+
+.requestButton {
+  float: right;
+  font-size: .3em;
+}

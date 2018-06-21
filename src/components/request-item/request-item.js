@@ -2,6 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import * as requestItemActions from '../../actions/request-item-actions';
+import './request-item.scss';
 
 class RequestItem extends React.Component {
   render() {
@@ -14,16 +15,18 @@ class RequestItem extends React.Component {
     return (
       <div className='requestItem' key={requestItem.id}>
         <ul>
-          <li>${requestItem.childname}</li>
-          <li>${requestItem.shoeType}</li>
-          <li>${requestItem.age}</li>
-          <li>${requestItem.gender}</li>
-          <li>${requestItem.shoeSize}</li>
-          <li>${requestItem.message}</li>
+          <li><strong className="notItalic"> Childname:</strong> {requestItem.childName} </li>
+          <li><strong> Shoe Type:</strong>  {requestItem.shoeType} </li>
+          <li><strong> Age:</strong>  {requestItem.age} </li>
+          <li><strong> Gender:</strong>  {requestItem.gender} </li>
+          <li><strong> Shoe Size:</strong>  {requestItem.shoeSize} </li>
+          <li><strong> Message:</strong>  {requestItem.message}</li>
         </ul>
-        <button className='requestItemUpdate' onClick={() => requestItemUpdate(requestItem)}>edit</button>
-        <button className='requestItemRemove' onClick={() => requestItemRemove(requestItem)}>X</button>
+        <div className='requestButton'>
+      <button className='requestItemUpdate' onClick={() => requestItemUpdate(requestItem)}>edit</button>
+      <button className='requestItemRemove' onClick={() => requestItemRemove(requestItem)}>X</button>
       </div>
+    </div>
     );
   }
 }
