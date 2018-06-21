@@ -2,6 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { Link } from 'react-router-dom';
 import { connect } from 'react-redux';
+import './header.scss';
 
 import * as authActions from '../../actions/auth-actions';
 import * as routes from '../../routes';
