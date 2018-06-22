@@ -44,8 +44,14 @@ A user's password must include the following.
 
 ## Architecture
 ![redeeming soles story board image](assets/redeeming-soles-story-board.jpeg)
-
-[include a bulleted list of any dependencies your project requires. Include links to the dependencies, and additionally links to helpful resources to get up and running with the project's dependencies]
+This front end application utilized the following dependencies for it's creation.
+babel-core, babel-eslint, babel-loader, babel-plugin-transform-react-jsx-source, babel-preset-env, 
+babel-preset-react, babel-preset-stage-0, clean-webpack-plugin, css-loader, dotenv, enzyme, 
+enzyme-adapter-react-16, eslint, eslint-config-airbnb-base, eslint-plugin-import, eslint-plugin-jest, 
+eslint-plugin-react, html-webpack-exclude-empty-assets-plugin, html-webpack-plugin, jest, 
+mini-css-extract-plugin, node-sass, prop-types, react, react-dom, react-redux, react-router-dom, 
+react-test-renderer, redux, redux-mock-store, sass-loader, style-loader, superagent, uuid, 
+validator, webpack, webpack-cli, webpack-dev-server, webpack-merge, express
 
 
 ## Testing
