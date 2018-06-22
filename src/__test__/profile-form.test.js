@@ -13,7 +13,20 @@ configureEnzyme({ adapter: new Adapter() });
 
 describe('Profile form testing', () => {
   const testState = {
-    shoes: [],
+    clientRequests: [],
+    _id: '5b2c542eaf594a24140cd088',
+    organizationName: 'BELLEVUE EAST LITTLE LEAGUE',
+    contactFirstName: 'Joshua',
+    contactLastName: 'Fredrickson',
+    title: 'UMPIRE',
+    phoneNumber: '4257491970',
+    mailingAddress: '3334 20th AVE W',
+    city: 'Seattle',
+    state: 'WA',
+    zipCode: '98199',
+    country: 'United States',
+    account: '5b2c4d23c381e124141dde6b',
+    __v: 0,
   };
 
   test('testing ProfileForm', () => {
@@ -45,6 +58,7 @@ describe('Profile form testing', () => {
     const mockStore = configureStore(middleware);
     const mountedProfileForm = mount(<Provider store={mockStore(testState)}><ProfileForm/>
     </Provider>);
-    expect((mountedProfileForm).find('button')).toBeTruthy();
+    expect(mountedProfileForm.find('button')).toBeTruthy();
+    expect(mountedProfileForm.find('button').length).toEqual(1);
   });
 });
