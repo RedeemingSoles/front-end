@@ -1,10 +1,9 @@
 'use strict';
 
-import express from 'express';
-
 require('dotenv').config();
 
-const app = express();
+var express = require('express');  // eslint-disable-line
+var app = express();  // eslint-disable-line
 
 app.use(express.static(`${__dirname}/build`));
 

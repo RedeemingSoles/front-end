@@ -31,7 +31,7 @@ const defaultState = {
 class ShoesForm extends React.Component {
   constructor(props) {
     super(props);
-    this.state = this.props.shoes ? this.props.shoes : defaultState;
+    this.state = this.props.requestItem ? this.props.requestItem : defaultState;
     autoBind.call(this, ShoesForm);
   }
 
@@ -74,7 +74,7 @@ class ShoesForm extends React.Component {
                 className="childName"
                 type="text"
                 name="childName"
-                placeholder="Child Name (optional)"
+                placeholder="(optional)"
                 value={this.state.childName}
                 onChange={this.handleChange}
               />
@@ -207,7 +207,7 @@ class ShoesForm extends React.Component {
               className="message"
               type="text"
               name="message"
-              placeholder="Message (optional)"
+              placeholder="(optional)"
               value={this.state.message}
               onChange={this.handleChange}
               />
@@ -215,7 +215,7 @@ class ShoesForm extends React.Component {
           </div>
 
           <div className="row">
-            <button className="authButton" type="submit" onClick={this.handleSubmit} >{buttonText} shoes</button>
+            <button id="authButton" type="submit" onClick={this.handleSubmit} >{buttonText} shoes</button>
           </div>
         </form>
       </div>
@@ -225,7 +225,7 @@ class ShoesForm extends React.Component {
 
 ShoesForm.propTypes = {
   onComplete: PropTypes.func,
-  shoes: PropTypes.object,
+  requestItem: PropTypes.object,
   buttonText: PropTypes.string,
 };
 

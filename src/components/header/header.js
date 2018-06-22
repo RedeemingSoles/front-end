@@ -20,19 +20,15 @@ class Header extends React.Component {
       <ul>
         <li><Link to={routes.DASHBOARD_ROUTE}>Dashboard</Link></li>
         <li><Link to={routes.PROFILE_ROUTE}>Profile</Link></li>
+        <li><button id="logoutButton" onClick={this.props.logout}>Logout</button></li>
       </ul>;
 
     return (
       <header className="header">
-        <h1>Redeeming Soles</h1>
-        <nav>
+        <h1 className='logo'><Link to={routes.LANDING_ROUTE} className='logoLink'>Redeeming Soles</Link></h1>
+        <nav className='nav'>
           { this.props.loggedIn ? JSXLoggedIn : JSXNotLoggedIn }
         </nav>
-        {
-          this.props.loggedIn ?
-            <button className="authButton" onClick={this.props.logout}>Logout</button>
-            : undefined
-        }
       </header>
     );
   }
