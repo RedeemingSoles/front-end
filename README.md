@@ -24,8 +24,10 @@ to fill any requested requests in-house first.
 
 
 ## Getting Started
-This web applications's url is [https://git.heroku.com/redeeming-soles-front.git](https://git.heroku.com/redeeming-soles-front.git)
-
+This web applications's url is [https://redeeming-soles-front.herokuapp.com/](https://redeeming-soles-front.herokuapp.com/)
+Sign in and use the intuitive interface to either request shoes for your youth sports team or 
+league or in Admin view allows Redeeming Soles volunteers to inventory inbound shoe donations for
+ the "No Kids Left on the Sidelines" program. 
 
 ## Using This Application
 A requesting coach or league official will sign up or login to the website.  Once logged in, the 
@@ -60,7 +62,6 @@ This application utilized the [Jest](https://facebook.github.io/jest/en/) testin
 
 application was also load tested with [Artillery.io](https://artillery.io/).
 ![Artillery.io report](assets/...)
-
 
 
 
