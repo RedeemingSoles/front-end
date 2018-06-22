@@ -10,10 +10,6 @@ body {
   text-align: center;
   font-family: 'Amiko', sans-serif;
   width:100%;
-
-  // background: url('/../assets/RedeemingSoles.jpg');
-  // background: url('..#{$assets}RedeemingSoles.jpg');
-  // background-size:cover;
 }
 
 .app {
@@ -23,8 +19,7 @@ body {
   left:10%;
   right:10%;
   top:0;
-  // margin: -20px auto;
-
+  min-height:100vh;
 }
 
 h1, h2 {
@@ -45,15 +40,12 @@ input {
   margin-right: 10px;
 }
 
-.landing{
-  height:100vh;
-}
 
 .linkLogin {
   color:#666;
 }
 
-#authButton {
+.authButton {
   background-color: white;
   color: black;
   border: 2px solid #555555;

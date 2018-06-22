@@ -7,7 +7,7 @@ const defaultState = token || null;
 export default (state = defaultState, { type, payload }) => {
   switch (type) {
     case 'TOKEN_SET':
-      return payload; // TODO: JSON.parse(payload) refactor all token requests
+      return payload;
     case 'TOKEN_REMOVE':
       return null;
     default:

@@ -111,7 +111,7 @@ class ProfileForm extends React.Component {
         />
         <input
           name="phoneNumber"
-          placeholder="Phone Number - '+15555555555'"
+          placeholder="Phone Number"
           type="text"
           value={this.state.phoneNumber}
           onChange={this.handleChange}
