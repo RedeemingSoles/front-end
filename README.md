@@ -24,8 +24,10 @@ to fill any requested requests in-house first.
 
 
 ## Getting Started
-This web applications's url is [https://git.heroku.com/redeeming-soles-front.git](https://git.heroku.com/redeeming-soles-front.git)
-
+This web applications's url is [https://redeeming-soles-front.herokuapp.com/](https://redeeming-soles-front.herokuapp.com/)
+Sign in and use the intuitive interface to either request shoes for your youth sports team or 
+league or in Admin view allows Redeeming Soles volunteers to inventory inbound shoe donations for
+ the "No Kids Left on the Sidelines" program. 
 
 ## Using This Application
 A requesting coach or league official will sign up or login to the website.  Once logged in, the 
@@ -44,8 +46,14 @@ A user's password must include the following.
 
 ## Architecture
 ![redeeming soles story board image](assets/redeeming-soles-story-board.jpeg)
-
-[include a bulleted list of any dependencies your project requires. Include links to the dependencies, and additionally links to helpful resources to get up and running with the project's dependencies]
+This front end application utilized the following dependencies for it's creation.
+babel-core, babel-eslint, babel-loader, babel-plugin-transform-react-jsx-source, babel-preset-env, 
+babel-preset-react, babel-preset-stage-0, clean-webpack-plugin, css-loader, dotenv, enzyme, 
+enzyme-adapter-react-16, eslint, eslint-config-airbnb-base, eslint-plugin-import, eslint-plugin-jest, 
+eslint-plugin-react, html-webpack-exclude-empty-assets-plugin, html-webpack-plugin, jest, 
+mini-css-extract-plugin, node-sass, prop-types, react, react-dom, react-redux, react-router-dom, 
+react-test-renderer, redux, redux-mock-store, sass-loader, style-loader, superagent, uuid, 
+validator, webpack, webpack-cli, webpack-dev-server, webpack-merge, express
 
 
 ## Testing
@@ -54,7 +62,6 @@ This application utilized the [Jest](https://facebook.github.io/jest/en/) testin
 
 application was also load tested with [Artillery.io](https://artillery.io/).
 ![Artillery.io report](assets/...)
-
 
 
 
