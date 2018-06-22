@@ -26,8 +26,7 @@ class Dashboard extends React.Component {
         <h3>Request Some Shoes</h3>
         <p> All Shoe Requests: </p>
         <div className="shoesFormContainer">
-        <Order />
-        <ShoesForm onComplete={requestItemCreate} buttonText={'Add'}/>
+        <ShoesForm onComplete={requestItemCreate} buttonText={'Add'}/><Order />
         </div>
       </div>
     );

@@ -1,9 +1,10 @@
 .container {
   background-color: #f2f2f2;
   padding: 20px;
-  width: 44%;
+  width: 50%;
   margin: 0 auto;
-  float:right;
+  display:table-cell;
+
 }
 
 input[type=text], input[type=number], select[type=text], select[type=number], textarea{
@@ -61,7 +62,16 @@ label {
 }
 
 @media screen and (max-width: 900px) {
-  .col-25, .col-75, .formButton, input[type=number], input[type=text], select[type=text], select[type=number], .container {
+
+  .container {
+    background-color: #f2f2f2;
+    width: 90%;
+    margin: 0 auto;
+    float:left;
+
+  }
+
+  .col-25, .col-75, .formButton, input[type=number], input[type=text], select[type=text], select[type=number]{
     width: 74.8%;
   }
   .col-75, .col-25, input[type=number], select[type=text], select[type=number], input[type=text] {
@@ -71,7 +81,16 @@ label {
 }
 
 @media screen and (max-width: 600px) {
-  .col-25, .formButton, .container {
+
+  .container {
+    background-color: #f2f2f2;
+    width: 90%;
+    margin: 0 auto;
+    float:left;
+
+  }
+
+  .col-25, .formButton{
     width: 74.8%;
   }
   .col-75, .col-25, input[type=number], input[type=text], select[type=text], select[type=number] {
