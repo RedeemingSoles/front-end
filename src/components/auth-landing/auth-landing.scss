@@ -2,13 +2,28 @@
   width:85%;
   text-align:center;
   margin:auto;
+
 }
 
 .landingText{
-  padding:25px;
-  color:#ffffff;
+  padding:30px 25px;
+  color:#333;
   width:85%;
   margin:auto;
   text-align:left;
   font-size:14pt;
+}
+
+.landingContent{
+  margin: 25px auto;
+  width:90%;
+  background-color:rgba(242, 242, 242, 0.2);
+  border-radius: 3px;
+  padding-bottom:25px;
+
+}
+
+
+.landingContent img{
+  width:85%;
 }

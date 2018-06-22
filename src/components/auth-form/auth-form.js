@@ -120,6 +120,7 @@ class AuthForm extends React.Component {
 
     return (
       <form className='auth-form' onSubmit={this.handleSubmit}>
+        <div className="landingLoginSignup">
         { this.state.usernameDirty ? <p>{ this.state.usernameError }</p> : undefined }
         <input
           name='username'
@@ -142,6 +143,7 @@ class AuthForm extends React.Component {
         />
         <div>
         <button type="submit">{type}</button>
+        </div>
         </div>
       </form>
     );
