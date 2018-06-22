@@ -31,7 +31,7 @@ const defaultState = {
 class ShoesForm extends React.Component {
   constructor(props) {
     super(props);
-    this.state = this.props.shoes ? this.props.shoes : defaultState;
+    this.state = this.props.requestItem ? this.props.requestItem : defaultState;
     autoBind.call(this, ShoesForm);
   }
 
@@ -233,7 +233,7 @@ class ShoesForm extends React.Component {
 
 ShoesForm.propTypes = {
   onComplete: PropTypes.func,
-  shoes: PropTypes.object,
+  requestItem: PropTypes.object,
   buttonText: PropTypes.string,
 };
 
