@@ -150,7 +150,7 @@ class AuthForm extends React.Component {
           />
         </div>
         <div className="authClearfix">
-        <button id='authButton' type="submit">{type}</button>
+        <button className='authButton' type="submit">{type}</button>
         </div>
         </div>
       </form>

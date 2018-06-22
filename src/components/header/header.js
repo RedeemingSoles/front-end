@@ -20,6 +20,7 @@ class Header extends React.Component {
       <ul>
         <li><Link to={routes.DASHBOARD_ROUTE}>Dashboard</Link></li>
         <li><Link to={routes.PROFILE_ROUTE}>Profile</Link></li>
+        <li><button id="logoutButton" onClick={this.props.logout}>Logout</button></li>
       </ul>;
 
     return (
@@ -28,11 +29,6 @@ class Header extends React.Component {
         <nav className='nav'>
           { this.props.loggedIn ? JSXLoggedIn : JSXNotLoggedIn }
         </nav>
-        {
-          this.props.loggedIn ?
-            <button className="authButton" onClick={this.props.logout}>Logout</button>
-            : undefined
-        }
       </header>
     );
   }

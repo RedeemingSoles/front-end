@@ -39,10 +39,10 @@ class RequestItem extends React.Component {
           <li><strong> Message:</strong>  {requestItem.message}</li>
         </ul>
         <div className='requestButton'>
-      <button className='requestItemUpdate' onClick={showModal}>edit</button>
-      <button className='requestItemRemove' onClick={() => requestItemRemove(requestItem)}>X</button>
-      <Modal show={requestItem.editing} handleClose={hideModal}>
-          <h3>Editing</h3>
+          <button className='requestItemRemove' onClick={() => requestItemRemove(requestItem)}>X</button>
+          <button className='requestItemUpdate' onClick={showModal}>edit</button>
+        <Modal show={requestItem.editing} handleClose={hideModal}>
+          <h3 id="modalButton">Editing</h3>
           <ShoesForm className='modalView' onComplete={updateAndClose} requestItem={requestItem}/>
         </Modal>
       </div>
