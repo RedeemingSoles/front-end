@@ -1,10 +1,9 @@
 'use strict';
 
-import express from 'express';
-
+var express = require('express');
 require('dotenv').config();
 
-const app = express();
+var app = express();
 
 app.use(express.static(`${__dirname}/build`));
 
