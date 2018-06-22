@@ -6,13 +6,22 @@
   float:right;
 }
 
-input[type=text], input[type=number], select, textarea{
+input[type=text], input[type=number], select[type=text], select[type=number], textarea{
   width: 80%;
   padding: 8px;
   border: 1px solid #ccc;
   border-radius: 4px;
   box-sizing: border-box;
   resize: vertical;
+}
+
+select[type=number], select[type=text] {
+  margin-top: 8px;
+}
+
+input {
+  margin-right: 0px;
+  font: .5em;
 }
 
 label {
@@ -28,8 +37,9 @@ label {
   border: none;
   border-radius: 4px;
   cursor: pointer;
-  margin-top: 10px;
-  width: 50%;
+  margin: 10px 25px 0px 10px;
+  width: 90%;
+  float: right;
 }
 
 .col-25 {
@@ -50,8 +60,22 @@ label {
   clear: both;
 }
 
-@media screen and (max-width: 600px) {
-  .col-25, .col-75, .formButton, input[type=number], input[type=text], .container {
+@media screen and (max-width: 900px) {
+  .col-25, .col-75, .formButton, input[type=number], input[type=text], select[type=text], select[type=number], .container {
     width: 74.8%;
+  }
+  .col-75, .col-25, input[type=number], select[type=text], select[type=number], input[type=text] {
+    width: 100%;
+    margin: 0 auto;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .col-25, .formButton, .container {
+    width: 74.8%;
+  }
+  .col-75, .col-25, input[type=number], input[type=text], select[type=text], select[type=number] {
+    width: 100%;
+    margin: 0 auto;
   }
 }
