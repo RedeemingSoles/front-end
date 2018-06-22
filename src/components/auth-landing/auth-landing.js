@@ -68,7 +68,6 @@ class Landing extends React.Component {
             designed to help provide a firm foundation for at risk youth to stand on by
             providing shoes and athletic gear to any child in need.</div>
           <div><img src="http://redeemingsoles.org/wp-content/uploads/2017/06/shutterstock_569931046-compressor.jpg" alt="" />
-            {/*<img src="http://redeemingsoles.org/wp-content/uploads/2017/06/shutterstock_372779881-compressor.jpg" alt="" />*/}
           </div>
         </div>
       </div>
