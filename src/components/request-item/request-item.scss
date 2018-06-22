@@ -5,7 +5,7 @@
 
   ul {
     padding: 0;
-    font-size: .8em;
+    font-size: 1em;
     margin: 0;
 
     li {
@@ -14,9 +14,10 @@
       font-size: .8em;
     }
   }
+  button {
+    float: right;
+    font-size: .3em;
+  }
 }
 
-.requestButton {
-  float: right;
-  font-size: .3em;
-}
+

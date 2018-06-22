@@ -86,125 +86,117 @@ class ShoesForm extends React.Component {
               <label>Shoe Type</label>
             </div>
             <div className="col-75">
-              <input
+              <select
                 list="sports"
                 className="shoeType"
                 type="text"
                 name="shoeType"
-                placeholder="Shoe Type"
+                required
                 value={this.state.shoeType}
                 onChange={this.handleChange}
-              />
+              >
+                <option disabled="true" value="">select</option>
+                <option value="Baseball">Baseball</option>
+                <option value="Basketball">Basketball</option>
+                <option value="Bowling">Bowling</option>
+                <option value="Cross Country">Cross Country</option>
+                <option value="Football">Football</option>
+                <option value="Golf">Golf</option>
+                <option value="Soccer">Soccer</option>
+                <option value="Softball">Softball</option>
+                <option value="Tennis">Tennis</option>
+                <option value="Track">Track</option>
+                <option value="Volleyball">Volleyball</option>
+                <option value="Wrestling">Wrestling</option>
+                <option value="Other">Other</option>
+              </select>
             </div>
           </div>
-          
-          <datalist id="sports">
-            <option value="Baseball"/>
-            <option value="Basketball"/>
-            <option value="Bowling"/>
-            <option value="Cross Country"/>
-            <option value="Football"/>
-            <option value="Golf"/>
-            <option value="Soccer"/>
-            <option value="Softball"/>
-            <option value="Tennis"/>
-            <option value="Track"/>
-            <option value="Volleyball"/>
-            <option value="Wrestling"/>
-            <option value="Other"/>
-          </datalist>
 
           <div className="row">
             <div className="col-25">
               <label>Gender</label>
             </div>
             <div className="col-75">
-              <input
+              <select
                 list="gender"
                 className="gender"
                 type="text"
                 name="gender"
-                placeholder="Gender"
+                required
                 value={this.state.gender}
                 onChange={this.handleChange}
-              />
+              >
+                <option disabled="true" value="">select</option>
+                <option value="Female">Female</option>
+                <option value="Male">Male</option>
+                <option value="N/A">N/A</option>
+              </select>
             </div>
           </div>
-
-          <datalist id="gender">
-            <option value="Female"/>
-            <option value="Male"/>
-            <option value="N/A"/>
-          </datalist>
 
           <div className="row">
             <div className="col-25">
               <label>Age</label>
             </div>
             <div className="col-75">
-              <input
+              <select
                 list="age"
                 type="text"
                 name="age"
-                placeholder="Age"
+                required
                 value={this.state.age}
                 onChange={this.handleChange}
-              />
+              >
+                <option disabled="true" value="">select</option>
+              <option value="Youth">Youth</option>
+              <option value="Adult">Adult</option>
+              </select>
             </div>
           </div>
-
-          <datalist id="age">
-            <option value="Youth"/>
-            <option value="Adult"/>
-          </datalist>
 
           <div className="row">
             <div className="col-25">
               <label>Shoe Size</label>
             </div>
             <div className="col-75">
-              <input
+              <select
                 className="shoeSize"
                 list="shoeSize"
                 type="number"
+                min="0"
                 step="0.1"
                 name="shoeSize"
-                placeholder="Shoe Size"
+                required
                 value={this.state.shoeSize}
                 onChange={this.handleChange}
-              />
+              >
+                <option disabled="true" value="">select</option>
+                <option value="1">1</option>
+                <option value="1.5">1.5</option>
+                <option value="2">2</option>
+                <option value="2.5">2.5</option>
+                <option value="3">3</option>
+                <option value="3.5">3.5</option>
+                <option value="4">4</option>
+                <option value="4.5">4.5</option>
+                <option value="5">5</option>
+                <option value="6">6</option>
+                <option value="7">7</option>
+                <option value="8">8</option>
+                <option value="9">9</option>
+                <option value="10">10</option>
+                <option value="10.5">10.5</option>
+                <option value="11">11</option>
+                <option value="11.5">11.5</option>
+                <option value="12">12</option>
+                <option value="12.5">12.5</option>
+                <option value="13">13</option>
+                <option value="13.5">13.5</option>
+                <option value="14">14</option>
+              </select>
             </div>
           </div>
-
-          <datalist id="shoeSize">
-            <option value="16"/>
-            <option value="15"/>
-            <option value="14"/>
-            <option value="13"/>
-            <option value="12"/>
-            <option value="11.5"/>
-            <option value="11"/>
-            <option value="10.5"/>
-            <option value="10"/>
-            <option value="9.5"/>
-            <option value="9"/>
-            <option value="8.5"/>
-            <option value="8"/>
-            <option value="7.5"/>
-            <option value="7"/>
-            <option value="6.5"/>
-            <option value="6"/>
-            <option value="5.5"/>
-            <option value="5"/>
-            <option value="4.5"/>
-            <option value="4"/>
-            <option value="3.3"/>
-            <option value="3"/>
-            <option value="2.5"/>
-            <option value="2"/>
-            <option value="1.5"/>
-            <option value="1"/>
-          </datalist>
 
           <div className="row">
             <div className="col-25">
