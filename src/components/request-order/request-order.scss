@@ -1,9 +1,10 @@
 .requestOrder {
   background-color: #f2f2f2;
-  padding: 20px;
+  padding: 10px 20px 0px 20px;
   width: 50%;
   margin: 0 auto;
   display:table-cell;
+  vertical-align:top;
 }
 
 
@@ -11,7 +12,7 @@
   overflow: scroll;
   border: 1em #f2f2f2 solid;
   background: white;
-  height: 20.4em;
+  height: 100%;
   width: 90%;
 }
 
