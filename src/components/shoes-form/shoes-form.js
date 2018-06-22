@@ -146,7 +146,7 @@ class ShoesForm extends React.Component {
                 list="age"
                 type="text"
                 name="age"
-                placeholder="Age"
+                placeholder="Age Type"
                 value={this.state.age}
                 onChange={this.handleChange}
               />
@@ -223,7 +223,7 @@ class ShoesForm extends React.Component {
           </div>
 
           <div className="row">
-            <button className="formButton" type="submit" onClick={this.handleSubmit} >{buttonText} shoes</button>
+            <button className="authButton" type="submit" onClick={this.handleSubmit} >{buttonText} shoes</button>
           </div>
         </form>
       </div>
