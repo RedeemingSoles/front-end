@@ -215,7 +215,7 @@ class ShoesForm extends React.Component {
           </div>
 
           <div className="row">
-            <button className="formButton" type="submit" onClick={this.handleSubmit} >{buttonText} shoes</button>
+            <button className="authButton" type="submit" onClick={this.handleSubmit} >{buttonText} shoes</button>
           </div>
         </form>
       </div>
