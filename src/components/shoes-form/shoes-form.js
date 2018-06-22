@@ -31,7 +31,7 @@ const defaultState = {
 class ShoesForm extends React.Component {
   constructor(props) {
     super(props);
-    this.state = this.props.shoes ? this.props.shoes : defaultState;
+    this.state = this.props.requestItem ? this.props.requestItem : defaultState;
     autoBind.call(this, ShoesForm);
   }
 
@@ -39,6 +39,7 @@ class ShoesForm extends React.Component {
     event.preventDefault();
     const { onComplete } = this.props;
     const result = onComplete(this.state);
+    this.setState(defaultState);
 
     if (result instanceof Promise) {
       result
@@ -142,10 +143,10 @@ class ShoesForm extends React.Component {
             </div>
             <div className="col-75">
               <input
-                className="age"
-                type="number"
+                list="age"
+                type="text"
                 name="age"
-                placeholder="Age"
+                placeholder="Age Type"
                 value={this.state.age}
                 onChange={this.handleChange}
               />
@@ -153,24 +154,8 @@ class ShoesForm extends React.Component {
           </div>
 
           <datalist id="age">
-            <option value="19"/>
-            <option value="18"/>
-            <option value="17"/>
-            <option value="16"/>
-            <option value="15"/>
-            <option value="14"/>
-            <option value="13"/>
-            <option value="12"/>
-            <option value="11"/>
-            <option value="10"/>
-            <option value="9"/>
-            <option value="8"/>
-            <option value="7"/>
-            <option value="6"/>
-            <option value="5"/>
-            <option value="4"/>
-            <option value="3"/>
-            <option value="N/A"/>
+            <option value="Youth"/>
+            <option value="Adult"/>
           </datalist>
 
           <div className="row">
@@ -182,6 +167,7 @@ class ShoesForm extends React.Component {
                 className="shoeSize"
                 list="shoeSize"
                 type="number"
+                step="0.1"
                 name="shoeSize"
                 placeholder="Shoe Size"
                 value={this.state.shoeSize}
@@ -222,7 +208,7 @@ class ShoesForm extends React.Component {
 
           <div className="row">
             <div className="col-25">
-              <label>Message (optional)</label>
+              <label>Message</label>
             </div>
             <div className="col-75">
               <input
@@ -237,7 +223,7 @@ class ShoesForm extends React.Component {
           </div>
 
           <div className="row">
-            <button className="formButton" type="submit" onClick={this.handleSubmit} >{buttonText} shoes</button>
+            <button className="authButton" type="submit" onClick={this.handleSubmit} >{buttonText} shoes</button>
           </div>
         </form>
       </div>
@@ -247,7 +233,7 @@ class ShoesForm extends React.Component {
 
 ShoesForm.propTypes = {
   onComplete: PropTypes.func,
-  shoes: PropTypes.object,
+  requestItem: PropTypes.object,
   buttonText: PropTypes.string,
 };
 

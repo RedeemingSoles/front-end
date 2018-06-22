@@ -33,11 +33,12 @@ class Order extends React.Component {
     return (
       <div className='requestOrder' key={Order.id}>
       <div id="itemList">
-            {
-              requestItems.map(item => 
-                <RequestItem requestItem={item} key={item.id} />)
-              }
-        <button className='requestOrderButton' onClick={this.handleSubmit}>submit all</button>
+      <label id="requestHeader">Current Requests:</label>
+        {
+        requestItems.map(item => 
+          <RequestItem requestItem={item} key={item.id} />)
+        }
+      <button className='authButton' onClick={this.handleSubmit}>submit</button>
         </div>
       </div>
     );

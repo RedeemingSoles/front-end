@@ -13,9 +13,17 @@ class AuthRedirect extends React.Component {
     if (pathname === routes.LOGIN_ROUTE ||
       pathname === routes.SIGNUP_ROUTE ||
       pathname === routes.LANDING_ROUTE) {
-      if (token) {
+      if (token && JSON.parse(this.props.token).isAdmin) {
+        destinationRoute = routes.ADMIN_ROUTE;
+      } else if (token) {
         destinationRoute = routes.DASHBOARD_ROUTE;
-      }
+        if (pathname === routes.DASHBOARD_ROUTE && token && JSON.parse(this.props.token).isAdmin) {
+          destinationRoute = routes.ADMIN_ROUTE;
+        }
+      } 
+    } else if (pathname === routes.DASHBOARD_ROUTE && token && 
+      JSON.parse(this.props.token).isAdmin) {
+      destinationRoute = routes.ADMIN_ROUTE;
     } else if (!token) {
       destinationRoute = routes.LANDING_ROUTE;
     }

@@ -6,9 +6,9 @@ const defaultState = token || null;
 
 export default (state = defaultState, { type, payload }) => {
   switch (type) {
-    case 'TOKEN_SET':
+    case 'AUTH_CRED_SET':
       return payload;
-    case 'TOKEN_REMOVE':
+    case 'AUTH_CRED_REMOVE':
       return null;
     default:
       return state;

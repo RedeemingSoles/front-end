@@ -28,7 +28,6 @@ class Dashboard extends React.Component {
         <div className="shoesFormContainer">
         <Order />
         <ShoesForm onComplete={requestItemCreate} buttonText={'Add'}/>
-        {/* <ShoesDonorForm onComplete={requestItemCreate} buttonText={'Submit'}/> */}
         </div>
       </div>
     );

@@ -10,16 +10,6 @@ const shoesCreate = shoes => ({
   payload: shoes,
 });
 
-const shoesUpdate = shoes => ({
-  type: 'SHOES_UPDATE',
-  payload: shoes,
-});
-
-const shoesDelete = shoes => ({
-  type: 'SHOES_DELETE',
-  payload: shoes,
-});
-
 const shoesFetchRequest = () => (store) => {
   return superagent.get(`${API_URL}/shoes`)
     .then((response) => {
@@ -37,24 +27,4 @@ const shoesCreateRequest = shoes => (store) => {
     });
 };
 
-const shoesUpdateRequest = shoes => (store) => {
-  return superagent.put(`${API_URL}/shoes/${shoes._id}`)
-    .send(shoes)
-    .then((response) => {
-      store.dispatch(shoesUpdate(response.body));
-      return response;
-    });
-};
-
-const shoesDeleteRequest = shoes => (store) => {
-  return superagent.delete(`${API_URL}/shoes/${shoes._id}`)
-    .then((response) => {
-      store.dispatch(shoesDelete(shoes));
-      return response;
-    });
-};
-
-export { 
-  shoesDeleteRequest, shoesFetchRequest, 
-  shoesUpdateRequest, shoesCreateRequest,
-};
+export { shoesFetchRequest, shoesCreateRequest };

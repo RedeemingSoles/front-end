@@ -21,7 +21,7 @@ const update = requestItem => ({
 });
 
 const remove = requestItem => ({
-  type: 'REQUEST_ITEM__REMOVE',
+  type: 'REQUEST_ITEM_REMOVE',
   payload: requestItem,
 });
 
