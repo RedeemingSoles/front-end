@@ -38,7 +38,7 @@ class Order extends React.Component {
         requestItems.map(item => 
           <RequestItem requestItem={item} key={item.id} />)
         }
-      <button className='authButton' onClick={this.handleSubmit}>submit</button>
+      <button className='requestOrderButton' onClick={this.handleSubmit}>submit</button>
         </div>
       </div>
     );

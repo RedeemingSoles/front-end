@@ -6,9 +6,9 @@ class Modal extends React.Component {
   render() {
     const showHideClassName = this.props.show ? 'modal display-block' : 'modal display-none';
     return (
-      <div className={showHideClassName}>
+      <div className={showHideClassName} id="modal">
         <main className='modal-main'>
-          <button className="authButton" onClick={this.props.handleClose}> close </button>
+          <button className="modalButton" onClick={this.props.handleClose}> x </button>
           {this.props.children}
         </main>
       </div>
