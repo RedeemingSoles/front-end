@@ -2,10 +2,10 @@ import shoesReducer from '../reducers/shoes';
 
 describe('Testing reducer in shoes', () => {
   const testState = {
-    shoeType: null,
-    gender: null,
-    age: null,
-    shoes: null,
+    shoeType: 'testShoeType',
+    gender: 'testGender',
+    age: 'testAge',
+    shoes: 'testShoes',
     _id: 11111111,
   };
   test('testing the state', () => {
