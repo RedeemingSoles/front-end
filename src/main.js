@@ -5,13 +5,12 @@ import { Provider } from 'react-redux';
 
 import App from './components/app/app';
 import reducers from './reducers/index';
-import reporter from './lib/redux-reporter';
 import session from './lib/redux-session';
 import thunk from './lib/redux-thunk';
 
 import './style/main.scss';
 
-const store = createStore(reducers, applyMiddleware(thunk, reporter, session));
+const store = createStore(reducers, applyMiddleware(thunk, session));
 
 const container = document.createElement('div');
 document.body.appendChild(container);
