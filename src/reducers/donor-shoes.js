@@ -15,12 +15,6 @@ export default (state = [], { type, payload }) => {
     case 'SHOES_DONOR_CREATE':
       validateDonorShoes(payload);
       return [payload, ...state];
-    case 'SHOES_DONOR_UPDATE':
-      validateDonorShoes(payload);
-      return state.map(donorShoes => (donorShoes._id === payload._id ? payload : donorShoes));
-    case 'SHOES_DONOR_DELETE':
-      validateDonorShoes(payload);
-      return state.filter(donorShoes => donorShoes._id !== payload._id);
     default:
       return state;
   }

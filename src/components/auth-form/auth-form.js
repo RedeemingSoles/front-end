@@ -105,15 +105,18 @@ class AuthForm extends React.Component {
     type = type === 'Login' ? type : 'Signup';
 
     const signUpJSX =
-      <div>
+      <div className="authContainer">
         { this.state.emailDirty ? <p>{ this.state.emailError }</p> : undefined }
-        <input
-          name='email'
-          placeholder='email'
-          type='email'
-          value={this.state.email}
-          onChange={this.handleChange}
-        />
+        <div className="authBlock">
+          <label className='authLabel'>Email</label>
+          <input
+            className='authInput'
+            name='email'
+            type='email'
+            value={this.state.email}
+            onChange={this.handleChange}
+          />
+        </div>
       </div>;
 
     const signUpRenderJSX = (type !== 'Login') ? signUpJSX : undefined;
@@ -122,27 +125,32 @@ class AuthForm extends React.Component {
       <form className='auth-form' onSubmit={this.handleSubmit}>
         <div className="landingLoginSignup">
         { this.state.usernameDirty ? <p>{ this.state.usernameError }</p> : undefined }
-        <input
-          name='username'
-          placeholder='username'
-          type='text'
-          value={this.state.username}
-          onChange={this.handleChange}
-        />
+        <div className="authBlock">
+        <label className='authLabel'>Username</label>
+          <input
+            id='login'
+            name='username'
+            type='text'
+            value={this.state.username}
+            onChange={this.handleChange}
+          />
+        </div>
 
         {signUpRenderJSX}
 
         { this.state.passwordDirty ? <p>{ this.state.passwordError }</p> : undefined }
-        <input
-          className={ this.state.passwordDirty ? 'input-error' : '' }
-          name='password'
-          placeholder='password'
-          type='password'
-          value={this.state.password}
-          onChange={this.handleChange}
-        />
-        <div>
-        <button type="submit">{type}</button>
+        <div className="authBlock">
+        <label className='authLabel'>Password</label>
+          <input
+            className={ this.state.passwordDirty ? 'input-error' : '' }
+            name='password'
+            type='password'
+            value={this.state.password}
+            onChange={this.handleChange}
+          />
+        </div>
+        <div className="authClearfix">
+        <button id='authButton' type="submit">{type}</button>
         </div>
         </div>
       </form>

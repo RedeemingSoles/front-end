@@ -30,7 +30,7 @@ class Header extends React.Component {
         </nav>
         {
           this.props.loggedIn ?
-            <button onClick={this.props.logout}>Logout</button>
+            <button className="authButton" onClick={this.props.logout}>Logout</button>
             : undefined
         }
       </header>
