@@ -57,12 +57,8 @@ validator, webpack, webpack-cli, webpack-dev-server, webpack-merge, express
 
 
 ## Testing
-This application utilized the [Jest](https://facebook.github.io/jest/en/) testing suite.  This 
-![Jest screen shot image](assets/...)
-
-application was also load tested with [Artillery.io](https://artillery.io/).
-![Artillery.io report](assets/...)
-
+This application utilized the [Jest](https://facebook.github.io/jest/en/) testing suite.  
+![Jest screen shot image](assets/Screen%20Shot%202018-06-22%20at%2012.04.26%20AM.png)
 
 
 ## Credits and Collaborations
