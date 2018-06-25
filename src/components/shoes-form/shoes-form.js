@@ -35,8 +35,8 @@ class ShoesForm extends React.Component {
     autoBind.call(this, ShoesForm);
   }
 
-  handleSubmit(event) {
-    event.preventDefault();
+  handleSubmit(e) {
+    e.preventDefault();
     const { onComplete } = this.props;
     const result = onComplete(this.state);
     this.setState(defaultState);
@@ -53,8 +53,8 @@ class ShoesForm extends React.Component {
     }
   }
 
-  handleChange(event) {
-    const { name, value } = event.target;
+  handleChange(e) {
+    const { name, value } = e.target;
     this.setState({
       [name]: value,
     });

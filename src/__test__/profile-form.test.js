@@ -7,57 +7,99 @@ import session from '../lib/redux-session';
 import thunk from '../lib/redux-thunk';
 import ProfileForm from '../components/profile-form/profile-form';
 
-
 configureEnzyme({ adapter: new Adapter() });
 
 describe('Profile form testing', () => {
   const testState = {
-    clientRequests: [],
-    _id: '5b2c542eaf594a24140cd088',
-    organizationName: 'BELLEVUE EAST LITTLE LEAGUE',
-    contactFirstName: 'Joshua',
-    contactLastName: 'Fredrickson',
-    title: 'UMPIRE',
-    phoneNumber: '4257491970',
-    mailingAddress: '3334 20th AVE W',
-    city: 'Seattle',
-    state: 'WA',
-    zipCode: '98199',
-    country: 'United States',
-    account: '5b2c4d23c381e124141dde6b',
-    __v: 0,
+    organizationName: '',
+    contactFirstName: '',
+    contactLastName: '',
+    title: '',
+    phoneNumber: '',
+    mailingAddress: '',
+    city: '',
+    state: '',
+    zipCode: '',
+    country: '',
   };
 
-  test('testing ProfileForm', () => {
-    const middleware = [thunk, session];
-    const mockStore = configureStore(middleware);
-    const mountedProfileForm = mount(<Provider store={mockStore(testState)}><ProfileForm/>
+  describe('Default State', () => {
+    test('testing ProfileForm', () => {
+      const middleware = [thunk, session];
+      const mockStore = configureStore(middleware);
+      const mountedProfileForm = mount(<Provider store={mockStore(testState)}><ProfileForm/>
+        </Provider>);
+      expect((mountedProfileForm).find('contactFirstName')).toBeTruthy();
+    });
+  
+    test('testing ProfileForm input field', () => {
+      const middleware = [thunk, session];
+      const mockStore = configureStore(middleware);
+      const mountedProfileForm = mount(<Provider store={mockStore(testState)}><ProfileForm/>
       </Provider>);
-    expect((mountedProfileForm).find('contactFirstName')).toBeTruthy();
+      expect((mountedProfileForm).find('input')).toBeTruthy();
+    });
+  
+    test('testing ProfileForm for organizationName', () => {
+      const middleware = [thunk, session];
+      const mockStore = configureStore(middleware);
+      const mountedProfileForm = mount(<Provider store={mockStore(testState)}><ProfileForm/>
+      </Provider>);
+      expect((mountedProfileForm).find('organizationName')).toBeTruthy();
+    });
+  
+    test('testing ProfileForm to render a button', () => {
+      const middleware = [thunk, session];
+      const mockStore = configureStore(middleware);
+      const mountedProfileForm = mount(<Provider store={mockStore(testState)}><ProfileForm/>
+      </Provider>);
+      expect(mountedProfileForm.find('button')).toBeTruthy();
+      expect(mountedProfileForm.find('button').length).toEqual(1);
+    });
   });
 
-  test('testing ProfileForm input field', () => {
-    const middleware = [thunk, session];
-    const mockStore = configureStore(middleware);
-    const mountedProfileForm = mount(<Provider store={mockStore(testState)}><ProfileForm/>
-    </Provider>);
-    expect((mountedProfileForm).find('input')).toBeTruthy();
-  });
+  describe('State Changes', () => {
+    test('testing state change of the Profile form.', () => {
+      const mountedProfileForm = mount(<ProfileForm/>);
 
-  test('testing ProfileForm for organizationName', () => {
-    const middleware = [thunk, session];
-    const mockStore = configureStore(middleware);
-    const mountedProfileForm = mount(<Provider store={mockStore(testState)}><ProfileForm/>
-    </Provider>);
-    expect((mountedProfileForm).find('organizationName')).toBeTruthy();
+      const testEvent = {
+        target: {
+          name: 'organizationName',
+          value: 'TestName',
+        },
+      };
+      mountedProfileForm.find('input').first().simulate('change', testEvent);
+      expect(mountedProfileForm.state().organizationName).toEqual('TestName');
+    });
   });
+  test('#handleValidation, should return validation error message for invalid phoneNumber input.', () => {
+    const mountedProfileForm = mount(<ProfileForm/>);
 
-  test('testing ProfileForm to render a button', () => {
-    const middleware = [thunk, session];
-    const mockStore = configureStore(middleware);
-    const mountedProfileForm = mount(<Provider store={mockStore(testState)}><ProfileForm/>
-    </Provider>);
-    expect(mountedProfileForm.find('button')).toBeTruthy();
-    expect(mountedProfileForm.find('button').length).toEqual(1);
+    const testEvent = {
+      target: {
+        name: 'phoneNumber',
+        value: '123',
+      },
+    };
+    mountedProfileForm.find('input').first().simulate('change', testEvent);
+    expect(mountedProfileForm.state().phoneNumberError).toEqual('Invalid phone number format.');
+  });
+  test('#handleValidation, should return null for phoneNumberError for a valid phoneNumber input.', () => {
+    const mountedProfileForm = mount(<ProfileForm/>);
+
+    const testEvent = {
+      target: {
+        name: 'phoneNumber',
+        value: '(123) 456-7891',
+      },
+    };
+    mountedProfileForm.find('input').first().simulate('change', testEvent);
+    expect(mountedProfileForm.state().phoneNumberError).toBeNull();
+  });
+  test('#handleSubmit, should call onComplete().', () => {
+    const mountedProfileForm = mount(<ProfileForm/>);
+    mountedProfileForm.setProps({ onComplete: jest.fn() });
+    mountedProfileForm.simulate('submit', { preventDefault: () => {} });
+    expect(mountedProfileForm.props().onComplete).toHaveBeenCalled();
   });
 });

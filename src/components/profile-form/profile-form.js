@@ -55,7 +55,7 @@ class ProfileForm extends React.Component {
     switch (name) {
       case 'phoneNumber':
         if (!/^[\+]?[(]?[0-9]{3}[)]?[-\s\.]?[0-9]{3}[-\s\.]?[0-9]{4,6}$/.test(value)) { // eslint-disable-line
-          return 'Your phone number must include: \'+\'1, \'area code\', \'seven digit number, no dashes or parenthesis';
+          return 'Invalid phone number format.';
         }
         return null;
       default:
@@ -89,6 +89,7 @@ class ProfileForm extends React.Component {
           onChange={this.handleChange}
         />
         <input
+          className="contactFirstNameInput"
           name="contactFirstName"
           placeholder="First Name"
           type="text"
