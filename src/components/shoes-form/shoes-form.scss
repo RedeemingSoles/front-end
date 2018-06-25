@@ -1,0 +1,100 @@
+.container {
+  background-color: #f2f2f2;
+  padding: 20px;
+  width: 50%;
+  margin: 0 auto;
+  display:table-cell;
+
+}
+
+input[type=text], input[type=number], select[type=text], select[type=number], textarea{
+  width: 80%;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  resize: vertical;
+}
+
+select[type=number], select[type=text] {
+  margin-top: 8px;
+}
+
+input {
+  margin-right: 0px;
+  font-size: .8em;
+}
+
+label {
+  padding: 12px 0 12px 0;
+  display: inline-block;
+  font-size: .8em;
+}
+
+#authButton {
+  background-color: #c27749;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  margin: 10px 25px 0px 10px;
+  width: 90%;
+  float: right;
+}
+
+.col-25 {
+  float: left;
+  width: 25%;
+  margin-top: 6px;
+}
+
+.col-75 {
+  float: left;
+  width: 75%;
+  margin-top: 6px;
+}
+
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+@media screen and (max-width: 900px) {
+
+  .container {
+    background-color: #f2f2f2;
+    width: 90%;
+    margin: 0 auto;
+    float:left;
+
+  }
+
+  .col-25, .col-75, .formButton, input[type=number], input[type=text], select[type=text], select[type=number]{
+    width: 74.8%;
+  }
+  .col-75, .col-25, input[type=number], select[type=text], select[type=number], input[type=text] {
+    width: 100%;
+    margin: 0 auto;
+  }
+}
+
+@media screen and (max-width: 600px) {
+
+  .container {
+    background-color: #f2f2f2;
+    width: 90%;
+    margin: 0 auto;
+    float:left;
+
+  }
+
+  .col-25, .formButton{
+    width: 74.8%;
+  }
+  .col-75, .col-25, input[type=number], input[type=text], select[type=text], select[type=number] {
+    width: 100%;
+    margin: 0 auto;
+  }
+}

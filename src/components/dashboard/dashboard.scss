@@ -1,0 +1,25 @@
+.dashboard h3 {
+  font-family:sans-serif;
+  height:10%;
+  margin:0px auto;
+  text-align: center;
+  width:100%;
+  color: white;
+}
+
+.dashboard p {
+  color: darkslategray;
+}
+
+.shoesFormContainer {
+  margin: 0 auto;
+  width: 75%;
+  height: 20%;
+  display:table;
+}
+
+.shoesFormContainer::after {
+  content: "";
+  clear: both;
+  display: table;
+}
