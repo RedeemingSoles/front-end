@@ -12,11 +12,11 @@
     "webpack": "webpack --config webpack.prod.js",
     "heroku-postbuild": "webpack --config webpack.prod.js",
     "test": "eslint . && jest --verbose --coverage --forceExit --runInBand",
-    "simpletest": "jest --verbose --coverage --forceExit --runInBand"
+    "test-nolint": "jest --verbose --coverage --forceExit --runInBand"
   },
   "jest": {
     "moduleNameMapper": {
-      "\\.scss$": "<rootDir>/src/__test__/mock-asset.js"
+      "\\.scss$": "<rootDir>/src/__test__/lib/mock-asset.js"
     },
     "setupFiles": [
       "<rootDir>/src/__test__/test.env.js"

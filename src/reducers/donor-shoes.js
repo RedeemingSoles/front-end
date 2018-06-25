@@ -1,8 +1,4 @@
 export const validateDonorShoes = (payload) => {
-  if (!payload._id) {
-    throw new Error('Validation error, no id');
-  }
-
   if (!payload.shoeType || !payload.age || !payload.gender || !payload.shoeSize) {
     throw new Error('Missing required properties');
   }

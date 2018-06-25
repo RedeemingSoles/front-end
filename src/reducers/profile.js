@@ -15,7 +15,7 @@ export const validateProfile = (profile) => {
 
   if (!organizationName || !contactFirstName || !contactLastName || !title ||
     !phoneNumber || !mailingAddress || !city || !state || !zipCode || !account) {
-    throw new Error('invalid profile information');
+    throw new Error('Invalid profile information');
   }
 };
 
