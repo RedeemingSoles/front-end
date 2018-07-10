@@ -58,7 +58,7 @@ validator, webpack, webpack-cli, webpack-dev-server, webpack-merge, express
 
 ## Testing
 This application utilized the [Jest](https://facebook.github.io/jest/en/) testing suite.  
-![Jest screen shot image](assets/Screen%20Shot%202018-06-22%20at%2012.04.26%20AM.png)
+<img width="668" alt="front-end-test" src="https://user-images.githubusercontent.com/34176171/42543082-fe47c586-845e-11e8-9a96-fc69782b4cdb.png">
 
 
 ## Credits and Collaborations
