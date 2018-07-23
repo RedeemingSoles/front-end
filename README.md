@@ -44,6 +44,7 @@ Redeeming Soles administrator, the site will be directed to the admin screen whi
 ## Architecture
 ![Redeeming Soles story board image](assets/redeeming-soles-story-board.jpeg)
 This front end application utilized the following dependencies for it's creation.
+
 | Dependencies |  | |
 | --- | --- | --- |
 | babel-core | babel-eslint  | babel-loader |
